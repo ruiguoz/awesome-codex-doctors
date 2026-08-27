@@ -94,12 +94,11 @@ def markdown_cell(value: str) -> str:
 
 
 def sorted_projects(data: dict) -> list[dict]:
-    order = {"core": 0, "adjacent": 1, "unverified": 2}
     return sorted(
         data["projects"],
         key=lambda project: (
-            order[project["scope"]],
-            project["specialty"],
+            -(project["stars"]),
+            -parse_date(project["pushed_at"]).timestamp(),
             project["full_name"].lower(),
         ),
     )
@@ -126,29 +125,6 @@ def render_specialty_links(data: dict, *, chinese: bool = False) -> str:
         )
         suffix = " 等" if chinese else " and more"
         lines.append(f"- **{label}**: {refs}{suffix}")
-    return "\n".join(lines)
-
-
-def starter_projects(data: dict) -> list[dict]:
-    core_projects = [project for project in data["projects"] if project["scope"] == "core"]
-    return sorted(
-        core_projects,
-        key=lambda project: (
-            -(project["stars"]),
-            project["state_change_risk"] != "read-only",
-            not project["skill_or_plugin"],
-            project["full_name"].lower(),
-        ),
-    )[:5]
-
-
-def render_starters(data: dict, *, chinese: bool = False) -> str:
-    lines = []
-    for project in starter_projects(data):
-        specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"]) if chinese else human_specialty(project["specialty"])
-        risk = RISK_ZH[project["state_change_risk"]] if chinese else project["state_change_risk"]
-        rationale = f"{specialty} · {project['stars']} ⭐ · {risk}"
-        lines.append(f"- [{project['full_name']}]({project['url']}) — {rationale}")
     return "\n".join(lines)
 
 
@@ -379,13 +355,6 @@ def main() -> int:
     )
     readme = inject_generated_block(
         readme,
-        "<!-- starters-en:start -->",
-        "<!-- starters-en:end -->",
-        render_starters(data),
-        label=README_PATH.name,
-    )
-    readme = inject_generated_block(
-        readme,
         "<!-- catalog-en:start -->",
         "<!-- catalog-en:end -->",
         render_catalog_table(data),
@@ -398,13 +367,6 @@ def main() -> int:
         "<!-- quick-links-zh:start -->",
         "<!-- quick-links-zh:end -->",
         render_specialty_links(data, chinese=True),
-        label=README_ZH_PATH.name,
-    )
-    readme_zh = inject_generated_block(
-        readme_zh,
-        "<!-- starters-zh:start -->",
-        "<!-- starters-zh:end -->",
-        render_starters(data, chinese=True),
         label=README_ZH_PATH.name,
     )
     readme_zh = inject_generated_block(

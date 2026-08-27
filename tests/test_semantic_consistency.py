@@ -46,9 +46,7 @@ class SemanticConsistencyTests(unittest.TestCase):
 
     def test_navigation_blocks_not_empty(self) -> None:
         self.assertIn("- **", generated_block(ROOT / "README.md", "<!-- quick-links-en:start -->", "<!-- quick-links-en:end -->"))
-        self.assertIn("- [", generated_block(ROOT / "README.md", "<!-- starters-en:start -->", "<!-- starters-en:end -->"))
         self.assertIn("- **", generated_block(ROOT / "README.zh-CN.md", "<!-- quick-links-zh:start -->", "<!-- quick-links-zh:end -->"))
-        self.assertIn("- [", generated_block(ROOT / "README.zh-CN.md", "<!-- starters-zh:start -->", "<!-- starters-zh:end -->"))
 
 
 if __name__ == "__main__":

@@ -28,6 +28,16 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 完整目录直接嵌入在下方，同时保留独立的 **[CATALOG.md](CATALOG.md)**。
 
+## 按专科快速导航
+
+<!-- quick-links-zh:start -->
+<!-- quick-links-zh:end -->
+
+## 新手优先项目
+
+<!-- starters-zh:start -->
+<!-- starters-zh:end -->
+
 ## 完整目录
 
 <!-- catalog-zh:start -->
@@ -106,14 +116,15 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 ## 数据与更新
 
-当前数据快照位于 [`data/github-snapshot.json`](data/github-snapshot.json)。运行：
+当前数据快照位于 [`data/github-snapshot.json`](data/github-snapshot.json)，机器可读导出位于 [`data/catalog.json`](data/catalog.json)。运行：
 
 ```bash
+python scripts/discover.py
 python scripts/render.py
 python scripts/render.py --check
 ```
 
-前者重新生成目录与曲线，后者供 CI 检查生成文件是否过期。
+`discover.py` 用于拉取待人工复核候选，`render.py` 重新生成目录/曲线/导出，`--check` 供 CI 检查生成文件是否过期。
 
 ## 免责声明
 

@@ -14,6 +14,8 @@ from urllib.parse import urlparse
 
 
 SCOPES = {"core", "adjacent", "unverified"}
+RISK_LEVELS = {"read-only", "repair", "cleanup", "unknown"}
+CONFIDENCE_LEVELS = {"yes", "no", "unknown"}
 PROJECT_FIELDS = {
     "full_name",
     "url",
@@ -21,6 +23,10 @@ PROJECT_FIELDS = {
     "scope",
     "specialty",
     "skill_or_plugin",
+    "state_change_risk",
+    "dry_run_support",
+    "backup_support",
+    "evidence_count",
     "created_at",
     "pushed_at",
     "stars",
@@ -106,6 +112,16 @@ def audit(repo: Path, *, data_override: dict | None = None) -> list[str]:
             errors.append(f"{full_name}: skill_or_plugin must be boolean")
         elif skill:
             derived["skill_or_plugin"] += 1
+        risk_level = project.get("state_change_risk")
+        if risk_level not in RISK_LEVELS:
+            errors.append(f"{full_name}: state_change_risk must be one of {sorted(RISK_LEVELS)}")
+        for field in ("dry_run_support", "backup_support"):
+            value = project.get(field)
+            if value not in CONFIDENCE_LEVELS:
+                errors.append(f"{full_name}: {field} must be one of {sorted(CONFIDENCE_LEVELS)}")
+        evidence_count = project.get("evidence_count")
+        if not isinstance(evidence_count, int) or isinstance(evidence_count, bool) or evidence_count < 1:
+            errors.append(f"{full_name}: evidence_count must be a positive integer")
         for field in ("stars", "forks"):
             value = project.get(field)
             if not isinstance(value, int) or isinstance(value, bool) or value < 0:

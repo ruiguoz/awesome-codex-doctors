@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "github-snapshot.json"
 CHART_PATH = ROOT / "assets" / "community-growth.svg"
 CATALOG_PATH = ROOT / "CATALOG.md"
+DATA_EXPORT_PATH = ROOT / "data" / "catalog.json"
 README_PATH = ROOT / "README.md"
 README_ZH_PATH = ROOT / "README.zh-CN.md"
 OFFICIAL_DOCTOR_RELEASE = datetime(2026, 5, 18, tzinfo=timezone.utc)
@@ -61,6 +62,21 @@ SPECIALTY_ZH = {
 }
 
 
+RISK_ZH = {
+    "read-only": "只读",
+    "repair": "修复",
+    "cleanup": "清理",
+    "unknown": "未知",
+}
+
+
+CONFIDENCE_ZH = {
+    "yes": "是",
+    "no": "否",
+    "unknown": "未知",
+}
+
+
 def load_data() -> dict:
     return json.loads(DATA_PATH.read_text(encoding="utf-8"))
 
@@ -85,17 +101,72 @@ def sorted_projects(data: dict) -> list[dict]:
     )
 
 
+def top_specialties(data: dict, *, limit: int = 8) -> list[str]:
+    counts: dict[str, int] = defaultdict(int)
+    for project in data["projects"]:
+        if project["scope"] == "core":
+            counts[project["specialty"]] += 1
+    return sorted(counts, key=lambda item: (-counts[item], item))[:limit]
+
+
+def render_specialty_links(data: dict, *, chinese: bool = False) -> str:
+    lines = []
+    for specialty in top_specialties(data):
+        members = [
+            project for project in sorted_projects(data)
+            if project["scope"] == "core" and project["specialty"] == specialty
+        ][:3]
+        label = SPECIALTY_ZH.get(specialty, specialty) if chinese else human_specialty(specialty)
+        refs = "、".join(f"[{project['full_name']}]({project['url']})" for project in members) if chinese else ", ".join(
+            f"[{project['full_name']}]({project['url']})" for project in members
+        )
+        suffix = " 等" if chinese else " and more"
+        lines.append(f"- **{label}**: {refs}{suffix}")
+    return "\n".join(lines)
+
+
+def starter_projects(data: dict) -> list[dict]:
+    core_projects = [project for project in data["projects"] if project["scope"] == "core"]
+    return sorted(
+        core_projects,
+        key=lambda project: (
+            -(project["stars"]),
+            project["state_change_risk"] != "read-only",
+            not project["skill_or_plugin"],
+            project["full_name"].lower(),
+        ),
+    )[:5]
+
+
+def render_starters(data: dict, *, chinese: bool = False) -> str:
+    lines = []
+    for project in starter_projects(data):
+        specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"]) if chinese else human_specialty(project["specialty"])
+        risk = RISK_ZH[project["state_change_risk"]] if chinese else project["state_change_risk"]
+        rationale = f"{specialty} · {project['stars']} ⭐ · {risk}"
+        lines.append(f"- [{project['full_name']}]({project['url']}) — {rationale}")
+    return "\n".join(lines)
+
+
+def export_catalog_data(data: dict) -> dict:
+    return {
+        "generated_at": data["generated_at"],
+        "counts": data["counts"],
+        "projects": sorted_projects(data),
+    }
+
+
 def render_catalog_table(data: dict, *, chinese: bool = False) -> str:
     if chinese:
         lines = [
-            "| 项目 | 专科 | 范围 | Skill / Plugin | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |",
-            "|---|---|---:|:---:|---|---|---:|---:|---:|",
+            "| 项目 | 专科 | 范围 | Skill / Plugin | 风险级别 | 预演 | 备份 | 证据数 | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |",
+            "|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
         ]
         scope_names = {"core": "核心", "adjacent": "邻近", "unverified": "待核验"}
     else:
         lines = [
-            "| Project | Specialty | Scope | Skill / plugin | Language | License | Created | Stars | Last push |",
-            "|---|---|---:|:---:|---|---|---:|---:|---:|",
+            "| Project | Specialty | Scope | Skill / plugin | Risk level | Dry-run | Backup | Evidence | Language | License | Created | Stars | Last push |",
+            "|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
         ]
         scope_names = {scope: scope.title() for scope in ("core", "adjacent", "unverified")}
 
@@ -106,10 +177,14 @@ def render_catalog_table(data: dict, *, chinese: bool = False) -> str:
         license_name = project["license"] or ("未声明" if chinese else "Not declared")
         skill = ("是" if project["skill_or_plugin"] else "否") if chinese else ("Yes" if project["skill_or_plugin"] else "No")
         specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"]) if chinese else human_specialty(project["specialty"])
+        risk_level = RISK_ZH[project["state_change_risk"]] if chinese else project["state_change_risk"]
+        dry_run = CONFIDENCE_ZH[project["dry_run_support"]] if chinese else project["dry_run_support"]
+        backup = CONFIDENCE_ZH[project["backup_support"]] if chinese else project["backup_support"]
         lines.append(
             "| "
             f"[{project['full_name']}]({project['url']}) | {specialty} | "
-            f"{scope_names[project['scope']]} | {skill} | {language} | {license_name} | "
+            f"{scope_names[project['scope']]} | {skill} | {risk_level} | {dry_run} | {backup} | {project['evidence_count']} | "
+            f"{language} | {license_name} | "
             f"{created} | {project['stars']} | {pushed} |"
         )
     return "\n".join(lines)
@@ -145,6 +220,10 @@ def render_catalog(data: dict) -> str:
         ]
     )
     return "\n".join(lines)
+
+
+def render_catalog_json(data: dict) -> str:
+    return json.dumps(export_catalog_data(data), ensure_ascii=False, indent=2)
 
 
 def inject_generated_block(path: Path, start: str, end: str, content: str) -> str:
@@ -284,7 +363,20 @@ def main() -> int:
     args = parser.parse_args()
     data = load_data()
     ok = write_or_check(CATALOG_PATH, render_catalog(data), args.check)
+    ok = write_or_check(DATA_EXPORT_PATH, render_catalog_json(data), args.check) and ok
     ok = write_or_check(CHART_PATH, render_chart(data), args.check) and ok
+    readme = inject_generated_block(
+        README_PATH,
+        "<!-- quick-links-en:start -->",
+        "<!-- quick-links-en:end -->",
+        render_specialty_links(data),
+    )
+    readme = inject_generated_block(
+        README_PATH,
+        "<!-- starters-en:start -->",
+        "<!-- starters-en:end -->",
+        render_starters(data),
+    )
     readme = inject_generated_block(
         README_PATH,
         "<!-- catalog-en:start -->",
@@ -292,6 +384,18 @@ def main() -> int:
         render_catalog_table(data),
     )
     ok = write_or_check(README_PATH, readme, args.check) and ok
+    readme_zh = inject_generated_block(
+        README_ZH_PATH,
+        "<!-- quick-links-zh:start -->",
+        "<!-- quick-links-zh:end -->",
+        render_specialty_links(data, chinese=True),
+    )
+    readme_zh = inject_generated_block(
+        README_ZH_PATH,
+        "<!-- starters-zh:start -->",
+        "<!-- starters-zh:end -->",
+        render_starters(data, chinese=True),
+    )
     readme_zh = inject_generated_block(
         README_ZH_PATH,
         "<!-- catalog-zh:start -->",

@@ -28,6 +28,16 @@ That growth is the point of this repository: Codex troubleshooting is becoming a
 
 The complete catalog is embedded below and is also available as a standalone **[CATALOG.md](CATALOG.md)**.
 
+## Quick navigation by specialty
+
+<!-- quick-links-en:start -->
+<!-- quick-links-en:end -->
+
+## Recommended starters
+
+<!-- starters-en:start -->
+<!-- starters-en:end -->
+
 ## Complete catalog
 
 <!-- catalog-en:start -->
@@ -106,14 +116,15 @@ Every entry is labeled by specialty and scope. Read-only diagnosis, repair, and 
 
 ## Data and updates
 
-The current source snapshot lives in [`data/github-snapshot.json`](data/github-snapshot.json). Run:
+The current source snapshot lives in [`data/github-snapshot.json`](data/github-snapshot.json). Machine-readable export is written to [`data/catalog.json`](data/catalog.json). Run:
 
 ```bash
+python scripts/discover.py
 python scripts/render.py
 python scripts/render.py --check
 ```
 
-The first command regenerates the catalog and chart; the second is suitable for CI.
+The discovery command refreshes candidate name matches for manual review, `render.py` regenerates catalogs/chart/export, and `--check` is suitable for CI.
 
 ## Disclaimer
 

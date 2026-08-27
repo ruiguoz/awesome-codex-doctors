@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: python scripts/check_snapshot_freshness.py --max-age-days 30
       - run: python scripts/render.py --check
       - run: python skills/update-awesome-codex-doctors/scripts/audit_catalog.py .
       - run: python -m unittest discover -s tests -v

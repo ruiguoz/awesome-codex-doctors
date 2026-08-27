@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Doctor"
+  short_description: "Diagnose Codex problems with evidence and safe routing"
+  default_prompt: "Use $codex-doctor to diagnose this Codex problem and recommend the safest evidence-backed next step."

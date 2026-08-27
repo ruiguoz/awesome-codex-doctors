@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Awesome Codex Doctors"
+  short_description: "Prepare verified, merge-ready catalog updates"
+  default_prompt: "Use $update-awesome-codex-doctors to add or refresh Codex Doctor entries and leave a merge-ready change."

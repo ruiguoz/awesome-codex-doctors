@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+  <title id="title">The Codex Doctor community is accelerating</title>
+  <desc id="desc">Cumulative public Codex Doctor projects increased from one in March 2026 to 42 by 2026-08-27. 12 are skills or plugins. 34 projects were created after the official doctor command shipped.</desc>
+  <style>
+    .bg { fill: #f6f8fa; }
+    .frame { fill: #ffffff; stroke: #d0d7de; }
+    .title { fill: #1f2328; font: 600 23px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .subtitle, .axis, .note { fill: #57606a; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .axis-title { fill: #1f2328; font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .grid { stroke: #d8dee4; stroke-width: 1; }
+    .all { fill: none; stroke: #0969da; stroke-width: 4; stroke-linejoin: round; }
+    .skills { fill: none; stroke: #1a7f37; stroke-width: 4; stroke-linejoin: round; }
+    .marker { stroke: #bf8700; stroke-width: 2; stroke-dasharray: 6 5; }
+    .marker-label { fill: #9a6700; font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .all-label { fill: #0969da; font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .skills-label { fill: #1a7f37; font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; } .frame { fill: #161b22; stroke: #30363d; }
+      .title, .axis-title { fill: #f0f6fc; } .subtitle, .axis, .note { fill: #8b949e; }
+      .grid { stroke: #30363d; } .all { stroke: #58a6ff; } .skills { stroke: #3fb950; }
+      .all-label { fill: #58a6ff; } .skills-label { fill: #3fb950; }
+      .marker { stroke: #d29922; } .marker-label { fill: #e3b341; }
+    }
+  </style>
+  <rect class="bg" width="960" height="500" rx="12" />
+  <text class="title" x="32" y="38">The Codex Doctor community is accelerating</text>
+  <text class="subtitle" x="32" y="62">42 curated projects · 12 skills/plugins · repository creation dates through 2026-08-27</text>
+  <rect class="frame" x="72" y="105" width="838" height="300" rx="4" />
+  <line class="grid" x1="72" y1="405.0" x2="910" y2="405.0" /><text class="axis" x="60" y="409.0" text-anchor="end">0</text><line class="grid" x1="72" y1="338.3" x2="910" y2="338.3" /><text class="axis" x="60" y="342.3" text-anchor="end">10</text><line class="grid" x1="72" y1="271.7" x2="910" y2="271.7" /><text class="axis" x="60" y="275.7" text-anchor="end">20</text><line class="grid" x1="72" y1="205.0" x2="910" y2="205.0" /><text class="axis" x="60" y="209.0" text-anchor="end">30</text><line class="grid" x1="72" y1="138.3" x2="910" y2="138.3" /><text class="axis" x="60" y="142.3" text-anchor="end">40</text><text class="axis" x="72.0" y="430" text-anchor="middle">Mar</text><text class="axis" x="217.1" y="430" text-anchor="middle">Apr</text><text class="axis" x="357.6" y="430" text-anchor="middle">May</text><text class="axis" x="502.7" y="430" text-anchor="middle">Jun</text><text class="axis" x="643.2" y="430" text-anchor="middle">Jul</text><text class="axis" x="788.3" y="430" text-anchor="middle">Aug</text>
+  <line class="marker" x1="437.2" y1="105" x2="437.2" y2="405" />
+  <text class="marker-label" x="445.2" y="123">Official codex doctor ships</text>
+  <text class="marker-label" x="445.2" y="139">CLI v0.131.0 · 18 May</text>
+  <path class="all" d="M 72.0 405.0 L 193.7 405.0 L 193.7 398.3 L 240.5 398.3 L 240.5 391.7 L 282.7 391.7 L 282.7 385.0 L 315.4 385.0 L 315.4 378.3 L 324.8 378.3 L 324.8 371.7 L 366.9 371.7 L 366.9 365.0 L 423.1 365.0 L 423.1 358.3 L 427.8 358.3 L 427.8 351.7 L 446.5 351.7 L 446.5 345.0 L 460.6 345.0 L 460.6 338.3 L 479.3 338.3 L 479.3 331.7 L 512.1 331.7 L 512.1 325.0 L 516.7 325.0 L 516.7 318.3 L 544.8 318.3 L 544.8 311.7 L 554.2 311.7 L 554.2 305.0 L 619.7 305.0 L 619.7 298.3 L 643.2 298.3 L 643.2 291.7 L 661.9 291.7 L 661.9 278.3 L 671.2 278.3 L 671.2 265.0 L 699.3 265.0 L 699.3 251.7 L 704.0 251.7 L 704.0 245.0 L 713.4 245.0 L 713.4 238.3 L 718.1 238.3 L 718.1 231.7 L 722.7 231.7 L 722.7 225.0 L 736.8 225.0 L 736.8 218.3 L 750.8 218.3 L 750.8 211.7 L 755.5 211.7 L 755.5 205.0 L 778.9 205.0 L 778.9 198.3 L 783.6 198.3 L 783.6 191.7 L 802.3 191.7 L 802.3 185.0 L 811.7 185.0 L 811.7 178.3 L 825.7 178.3 L 825.7 165.0 L 835.1 165.0 L 835.1 151.7 L 844.5 151.7 L 844.5 145.0 L 863.2 145.0 L 863.2 138.3 L 877.2 138.3 L 877.2 131.7 L 881.9 131.7 L 881.9 125.0 L 910.0 125.0" />
+  <path class="skills" d="M 72.0 405.0 L 193.7 405.0 L 193.7 398.3 L 282.7 398.3 L 282.7 391.7 L 315.4 391.7 L 315.4 385.0 L 324.8 385.0 L 324.8 378.3 L 512.1 378.3 L 512.1 371.7 L 516.7 371.7 L 516.7 365.0 L 544.8 365.0 L 544.8 358.3 L 619.7 358.3 L 619.7 351.7 L 671.2 351.7 L 671.2 345.0 L 699.3 345.0 L 699.3 338.3 L 844.5 338.3 L 844.5 331.7 L 863.2 331.7 L 863.2 325.0 L 910.0 325.0" />
+  <circle cx="910.0" cy="125.0" r="5" fill="#0969da" />
+  <circle cx="910.0" cy="325.0" r="5" fill="#1a7f37" />
+  <text class="all-label" x="900" y="113.0" text-anchor="end">42 all projects</text>
+  <text class="skills-label" x="900" y="313.0" text-anchor="end">12 skills / plugins</text>
+  <text class="axis-title" x="491.0" y="458" text-anchor="middle">Repository creation date (2026)</text>
+  <text class="axis-title" transform="translate(24 255.0) rotate(-90)" text-anchor="middle">Cumulative public projects</text>
+  <text class="note" x="72" y="482">34 of 42 curated projects appeared after the official command shipped. Source: GitHub Search API + manual review.</text>
+</svg>

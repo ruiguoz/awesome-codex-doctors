@@ -17,9 +17,19 @@ Please include:
 - license and latest verified version;
 - evidence: README section, release, source file, or test demonstrating the claim.
 
+Before manual review, you can generate fresh candidates with:
+
+```bash
+python scripts/discover.py
+```
+
+Then copy only reviewed rows into `data/github-snapshot.json`.
+
 ## Safety requirements
 
 Tools that modify local state must document backup behavior, dry-run support, confirmation behavior, and the paths they can change. Projects that conceal destructive behavior or encourage unsafe deletion are not accepted.
+
+Each catalog row should explicitly set `state_change_risk`, `dry_run_support`, `backup_support`, and `evidence_count`. Use `unknown` when evidence is incomplete rather than guessing.
 
 ## Descriptions
 

@@ -26,7 +26,11 @@
       "forks": 0,
       "language": "Python",
       "license": "NOASSERTION",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "hj01857655/codex-doctor",
@@ -41,7 +45,11 @@
       "forks": 0,
       "language": "Rust",
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "yes",
+      "backup_support": "yes",
+      "evidence_count": 3
     },
     {
       "full_name": "daniel-p-green/codex-skill_secret-agents-dot-md-doctor",
@@ -56,7 +64,11 @@
       "forks": 0,
       "language": "Python",
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Esquetta/CodexPluginDoctor",
@@ -71,7 +83,11 @@
       "forks": 0,
       "language": "TypeScript",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Maverick04/codex-doctor",
@@ -86,7 +102,11 @@
       "forks": 0,
       "language": "JavaScript",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "wokao4360-rgb/codex-desktop-doctor",
@@ -101,7 +121,11 @@
       "forks": 1,
       "language": "PowerShell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 2
     },
     {
       "full_name": "2023Anita/codex-speed-doctor",
@@ -116,7 +140,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Nitmi/codex-session-doctor",
@@ -131,7 +159,11 @@
       "forks": 0,
       "language": "Go",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "ironman429100-rgb/codex-token-doctor",
@@ -146,7 +178,11 @@
       "forks": 0,
       "language": "Python",
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "ChenSir886/codex-context-doctor-cn",
@@ -161,7 +197,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "2395115107-stack/codex-history-doctor",
@@ -176,7 +216,11 @@
       "forks": 0,
       "language": "JavaScript",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "navi118/codex-desktop-doctor-skill",
@@ -191,7 +235,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 2
     },
     {
       "full_name": "UPmeme/codex-windows-plugin-doctor",
@@ -206,7 +254,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 2
     },
     {
       "full_name": "baixinpan/codex-reconnecting-doctor",
@@ -221,7 +273,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 2
     },
     {
       "full_name": "ember056/codex_session_doctor",
@@ -236,7 +292,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "leiJack-lo/codex-local-doctor-skill",
@@ -251,7 +311,11 @@
       "forks": 0,
       "language": "Python",
       "license": "Apache-2.0",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Gmasterzhangxinyang/codex-doctor",
@@ -266,7 +330,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "shixianli083-eng/codex-doctor",
@@ -281,7 +349,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "juzai0924-cloud/codex-reconnect-doctor",
@@ -296,7 +368,11 @@
       "forks": 0,
       "language": "Swift",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Qiyuanqiii/codex-401-doctor",
@@ -311,7 +387,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "YizeSun/codex-doctor",
@@ -326,7 +406,11 @@
       "forks": 0,
       "language": "Shell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "cleanup",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 2
     },
     {
       "full_name": "junchangzhu42-eng/codex-skill-doctor",
@@ -341,7 +425,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Freyliu0516/Codex-Log-Doctor",
@@ -356,7 +444,11 @@
       "forks": 0,
       "language": "Rust",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "zjp1997720/codex-doctor",
@@ -371,7 +463,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "warren2008-2020-spec/codex-doctor",
@@ -386,7 +482,11 @@
       "forks": 0,
       "language": "JavaScript",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "configcrate/codex-session-doctor",
@@ -401,7 +501,11 @@
       "forks": 0,
       "language": "Go",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "luogangan7-lgtm/codex-mcp-doctor",
@@ -416,7 +520,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "gtrgear/codex-submission-doctor",
@@ -431,7 +539,11 @@
       "forks": 0,
       "language": "Python",
       "license": "NOASSERTION",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "BTCElectrician/codex-storage-doctor",
@@ -446,7 +558,11 @@
       "forks": 0,
       "language": "Python",
       "license": "Apache-2.0",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Lumidew/codex-doctor",
@@ -461,7 +577,11 @@
       "forks": 0,
       "language": null,
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "DWG7318/codex-network-doctor",
@@ -476,7 +596,11 @@
       "forks": 0,
       "language": "Go",
       "license": "Apache-2.0",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Yurainln1122/codex-windows-doctor",
@@ -491,7 +615,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "wildbyteai/codex-provider-doctor",
@@ -506,7 +634,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "RE-Rays/codex-environment-doctor",
@@ -521,7 +653,11 @@
       "forks": 0,
       "language": "Python",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "momochoog/codex-workspace-doctor",
@@ -536,7 +672,11 @@
       "forks": 0,
       "language": null,
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "Yaro-Tab/codex-windows-doctor",
@@ -551,7 +691,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "read-only",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "xiangyanghua-22/codex-hooks-doctor",
@@ -566,7 +710,11 @@
       "forks": 0,
       "language": "TypeScript",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "cuijialin8888-code/codex-win-doctor",
@@ -581,7 +729,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "y3078266584/codex-plugin-doctor",
@@ -596,7 +748,11 @@
       "forks": 0,
       "language": "PowerShell",
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "repair",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "yezhouyedu/codex-report-doctor",
@@ -611,7 +767,11 @@
       "forks": 0,
       "language": null,
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "vik-codex/Doctor",
@@ -626,7 +786,11 @@
       "forks": 0,
       "language": "HTML",
       "license": null,
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     },
     {
       "full_name": "RobertIonutF/codex-budget-doctor",
@@ -641,7 +805,11 @@
       "forks": 0,
       "language": "TypeScript",
       "license": "MIT",
-      "archived": false
+      "archived": false,
+      "state_change_risk": "unknown",
+      "dry_run_support": "unknown",
+      "backup_support": "unknown",
+      "evidence_count": 1
     }
   ]
 }

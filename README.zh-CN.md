@@ -28,54 +28,81 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 完整目录直接嵌入在下方，同时保留独立的 **[CATALOG.md](CATALOG.md)**。
 
+## 按专科快速导航
+
+<!-- quick-links-zh:start -->
+
+- **Desktop 插件修复**: [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill)、[UPmeme/codex-windows-plugin-doctor](https://github.com/UPmeme/codex-windows-plugin-doctor)、[y3078266584/codex-plugin-doctor](https://github.com/y3078266584/codex-plugin-doctor) 等
+- **Windows**: [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor)、[Yaro-Tab/codex-windows-doctor](https://github.com/Yaro-Tab/codex-windows-doctor)、[Yurainln1122/codex-windows-doctor](https://github.com/Yurainln1122/codex-windows-doctor) 等
+- **重连**: [baixinpan/codex-reconnecting-doctor](https://github.com/baixinpan/codex-reconnecting-doctor)、[juzai0924-cloud/codex-reconnect-doctor](https://github.com/juzai0924-cloud/codex-reconnect-doctor) 等
+- **会话修复**: [hj01857655/codex-doctor](https://github.com/hj01857655/codex-doctor)、[Nitmi/codex-session-doctor](https://github.com/Nitmi/codex-session-doctor) 等
+- **认证**: [Qiyuanqiii/codex-401-doctor](https://github.com/Qiyuanqiii/codex-401-doctor) 等
+- **配置**: [Lumidew/codex-doctor](https://github.com/Lumidew/codex-doctor) 等
+- **上下文**: [ChenSir886/codex-context-doctor-cn](https://github.com/ChenSir886/codex-context-doctor-cn) 等
+- **上下文与 Token**: [ironman429100-rgb/codex-token-doctor](https://github.com/ironman429100-rgb/codex-token-doctor) 等
+
+<!-- quick-links-zh:end -->
+
+## 新手优先项目
+
+<!-- starters-zh:start -->
+
+- [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) — Desktop 插件修复 · 32 ⭐ · 修复
+- [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) — Desktop 修复 · 12 ⭐ · 修复
+- [2023Anita/codex-speed-doctor](https://github.com/2023Anita/codex-speed-doctor) — 性能 · 5 ⭐ · 只读
+- [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor) — Windows · 3 ⭐ · 未知
+- [Esquetta/CodexPluginDoctor](https://github.com/Esquetta/CodexPluginDoctor) — 插件验证 · 2 ⭐ · 未知
+
+<!-- starters-zh:end -->
+
 ## 完整目录
 
 <!-- catalog-zh:start -->
 
-| 项目 | 专科 | 范围 | Skill / Plugin | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |
-|---|---|---:|:---:|---|---|---:|---:|---:|
-| [Qiyuanqiii/codex-401-doctor](https://github.com/Qiyuanqiii/codex-401-doctor) | 认证 | 核心 | 否 | PowerShell | 未声明 | 2026-07-07 | 2 | 2026-08-06 |
-| [Lumidew/codex-doctor](https://github.com/Lumidew/codex-doctor) | 配置 | 核心 | 否 | — | 未声明 | 2026-07-25 | 0 | 2026-07-25 |
-| [ChenSir886/codex-context-doctor-cn](https://github.com/ChenSir886/codex-context-doctor-cn) | 上下文 | 核心 | 否 | Python | MIT | 2026-05-23 | 0 | 2026-05-23 |
-| [ironman429100-rgb/codex-token-doctor](https://github.com/ironman429100-rgb/codex-token-doctor) | 上下文与 Token | 核心 | 否 | Python | 未声明 | 2026-05-20 | 0 | 2026-05-25 |
-| [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) | Desktop 插件修复 | 核心 | 是 | PowerShell | MIT | 2026-06-03 | 32 | 2026-07-21 |
-| [UPmeme/codex-windows-plugin-doctor](https://github.com/UPmeme/codex-windows-plugin-doctor) | Desktop 插件修复 | 核心 | 是 | PowerShell | MIT | 2026-06-04 | 0 | 2026-06-04 |
-| [y3078266584/codex-plugin-doctor](https://github.com/y3078266584/codex-plugin-doctor) | Desktop 插件修复 | 核心 | 是 | PowerShell | 未声明 | 2026-08-13 | 0 | 2026-08-13 |
-| [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) | Desktop 修复 | 核心 | 否 | PowerShell | MIT | 2026-05-03 | 12 | 2026-05-03 |
-| [RE-Rays/codex-environment-doctor](https://github.com/RE-Rays/codex-environment-doctor) | 环境 | 核心 | 否 | Python | MIT | 2026-08-06 | 1 | 2026-08-06 |
-| [2395115107-stack/codex-history-doctor](https://github.com/2395115107-stack/codex-history-doctor) | 历史记录 | 核心 | 否 | JavaScript | MIT | 2026-05-27 | 1 | 2026-05-28 |
-| [xiangyanghua-22/codex-hooks-doctor](https://github.com/xiangyanghua-22/codex-hooks-doctor) | Hooks | 核心 | 否 | TypeScript | MIT | 2026-08-11 | 0 | 2026-08-13 |
-| [leiJack-lo/codex-local-doctor-skill](https://github.com/leiJack-lo/codex-local-doctor-skill) | 本地状态 | 核心 | 是 | Python | Apache-2.0 | 2026-06-26 | 0 | 2026-06-26 |
-| [Freyliu0516/Codex-Log-Doctor](https://github.com/Freyliu0516/Codex-Log-Doctor) | 日志 | 核心 | 否 | Rust | MIT | 2026-07-13 | 1 | 2026-07-14 |
-| [shixianli083-eng/codex-doctor](https://github.com/shixianli083-eng/codex-doctor) | macOS 环境 | 核心 | 否 | Python | MIT | 2026-07-05 | 0 | 2026-07-05 |
-| [luogangan7-lgtm/codex-mcp-doctor](https://github.com/luogangan7-lgtm/codex-mcp-doctor) | MCP | 核心 | 否 | Python | MIT | 2026-07-18 | 0 | 2026-07-19 |
-| [wildbyteai/codex-provider-doctor](https://github.com/wildbyteai/codex-provider-doctor) | 模型 Provider | 核心 | 否 | Python | MIT | 2026-08-04 | 0 | 2026-08-06 |
-| [DWG7318/codex-network-doctor](https://github.com/DWG7318/codex-network-doctor) | 网络 | 核心 | 否 | Go | Apache-2.0 | 2026-07-30 | 0 | 2026-08-13 |
-| [2023Anita/codex-speed-doctor](https://github.com/2023Anita/codex-speed-doctor) | 性能 | 核心 | 否 | Python | MIT | 2026-05-15 | 5 | 2026-07-19 |
-| [Esquetta/CodexPluginDoctor](https://github.com/Esquetta/CodexPluginDoctor) | 插件验证 | 核心 | 是 | TypeScript | MIT | 2026-04-22 | 2 | 2026-08-25 |
-| [baixinpan/codex-reconnecting-doctor](https://github.com/baixinpan/codex-reconnecting-doctor) | 重连 | 核心 | 是 | Python | MIT | 2026-06-10 | 0 | 2026-06-10 |
-| [juzai0924-cloud/codex-reconnect-doctor](https://github.com/juzai0924-cloud/codex-reconnect-doctor) | 重连 | 核心 | 否 | Swift | MIT | 2026-07-05 | 0 | 2026-07-06 |
-| [YizeSun/codex-doctor](https://github.com/YizeSun/codex-doctor) | 运行时存储 | 核心 | 是 | Shell | MIT | 2026-07-07 | 0 | 2026-07-25 |
-| [Gmasterzhangxinyang/codex-doctor](https://github.com/Gmasterzhangxinyang/codex-doctor) | 会话健康 | 核心 | 否 | Python | MIT | 2026-07-01 | 1 | 2026-07-22 |
-| [configcrate/codex-session-doctor](https://github.com/configcrate/codex-session-doctor) | 会话完整性 | 核心 | 否 | Go | MIT | 2026-07-17 | 0 | 2026-07-17 |
-| [Maverick04/codex-doctor](https://github.com/Maverick04/codex-doctor) | 会话可观测性 | 核心 | 是 | JavaScript | MIT | 2026-04-24 | 1 | 2026-04-25 |
-| [ember056/codex_session_doctor](https://github.com/ember056/codex_session_doctor) | 会话恢复 | 核心 | 否 | Python | MIT | 2026-06-12 | 0 | 2026-06-12 |
-| [hj01857655/codex-doctor](https://github.com/hj01857655/codex-doctor) | 会话修复 | 核心 | 否 | Rust | 未声明 | 2026-04-06 | 1 | 2026-04-08 |
-| [Nitmi/codex-session-doctor](https://github.com/Nitmi/codex-session-doctor) | 会话修复 | 核心 | 否 | Go | MIT | 2026-05-16 | 0 | 2026-05-16 |
-| [warren2008-2020-spec/codex-doctor](https://github.com/warren2008-2020-spec/codex-doctor) | 安装与配置 | 核心 | 否 | JavaScript | MIT | 2026-07-16 | 0 | 2026-07-16 |
-| [warwickmei/codex-skill-doctor](https://github.com/warwickmei/codex-skill-doctor) | Skill 诊断 | 核心 | 是 | Python | NOASSERTION | 2026-03-27 | 0 | 2026-03-27 |
-| [junchangzhu42-eng/codex-skill-doctor](https://github.com/junchangzhu42-eng/codex-skill-doctor) | Skill 恢复 | 核心 | 是 | Python | MIT | 2026-07-13 | 0 | 2026-07-13 |
-| [BTCElectrician/codex-storage-doctor](https://github.com/BTCElectrician/codex-storage-doctor) | SQLite 存储 | 核心 | 否 | Python | Apache-2.0 | 2026-07-24 | 0 | 2026-07-25 |
-| [RobertIonutF/codex-budget-doctor](https://github.com/RobertIonutF/codex-budget-doctor) | 用量与预算 | 核心 | 否 | TypeScript | MIT | 2026-08-21 | 0 | 2026-08-21 |
-| [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor) | Windows | 核心 | 否 | PowerShell | MIT | 2026-08-11 | 3 | 2026-08-26 |
-| [Yaro-Tab/codex-windows-doctor](https://github.com/Yaro-Tab/codex-windows-doctor) | Windows | 核心 | 否 | PowerShell | MIT | 2026-08-09 | 0 | 2026-08-09 |
-| [Yurainln1122/codex-windows-doctor](https://github.com/Yurainln1122/codex-windows-doctor) | Windows | 核心 | 否 | PowerShell | MIT | 2026-07-31 | 1 | 2026-07-31 |
-| [zjp1997720/codex-doctor](https://github.com/zjp1997720/codex-doctor) | 工作区配置 | 核心 | 否 | Python | MIT | 2026-07-14 | 0 | 2026-07-17 |
-| [momochoog/codex-workspace-doctor](https://github.com/momochoog/codex-workspace-doctor) | 工作区存储 | 核心 | 否 | — | 未声明 | 2026-08-09 | 0 | 2026-08-09 |
-| [daniel-p-green/codex-skill_secret-agents-dot-md-doctor](https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor) | AGENTS.md | 邻近 | 是 | Python | 未声明 | 2026-04-15 | 0 | 2026-04-15 |
-| [yezhouyedu/codex-report-doctor](https://github.com/yezhouyedu/codex-report-doctor) | 报告质量 | 邻近 | 是 | — | MIT | 2026-08-17 | 0 | 2026-08-17 |
-| [gtrgear/codex-submission-doctor](https://github.com/gtrgear/codex-submission-doctor) | 提交预检 | 邻近 | 否 | Python | NOASSERTION | 2026-07-21 | 0 | 2026-07-21 |
-| [vik-codex/Doctor](https://github.com/vik-codex/Doctor) | 待确认 | 待核验 | 否 | HTML | 未声明 | 2026-08-20 | 0 | 2026-08-20 |
+| 项目 | 关注点 | 专科 | 范围 | Skill / Plugin | 风险级别 | 预演 | 备份 | 证据数 | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |
+|---|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|
+| [Qiyuanqiii/codex-401-doctor](https://github.com/Qiyuanqiii/codex-401-doctor) | Diagnose and repair common Codex 401 Unauthorized issues on Windows | 认证 | 核心 | 否 | 修复 | 未知 | 未知 | 1 | PowerShell | 未声明 | 2026-07-07 | 2 | 2026-08-06 |
+| [Lumidew/codex-doctor](https://github.com/Lumidew/codex-doctor) | Codex-native diagnostics and configuration hygiene with approval-gated fixes. | 配置 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | — | 未声明 | 2026-07-25 | 0 | 2026-07-25 |
+| [ChenSir886/codex-context-doctor-cn](https://github.com/ChenSir886/codex-context-doctor-cn) | 中文 Codex 上下文配置体检工具，检查自动压缩阈值和模型窗口 | 上下文 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | MIT | 2026-05-23 | 0 | 2026-05-23 |
+| [ironman429100-rgb/codex-token-doctor](https://github.com/ironman429100-rgb/codex-token-doctor) |  | 上下文与 Token | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | 未声明 | 2026-05-20 | 0 | 2026-05-25 |
+| [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) | Codex Skill for diagnosing Chrome and Computer Use failures in Codex Desktop on Windows. | Desktop 插件修复 | 核心 | 是 | 修复 | 未知 | 未知 | 2 | PowerShell | MIT | 2026-06-03 | 32 | 2026-07-21 |
+| [UPmeme/codex-windows-plugin-doctor](https://github.com/UPmeme/codex-windows-plugin-doctor) | Fix and diagnose Codex Computer Use, Chrome, and Browser plugin issues on Windows. | Desktop 插件修复 | 核心 | 是 | 修复 | 未知 | 未知 | 2 | PowerShell | MIT | 2026-06-04 | 0 | 2026-06-04 |
+| [y3078266584/codex-plugin-doctor](https://github.com/y3078266584/codex-plugin-doctor) | 🩺 修复 Codex Windows 端 openai-bundled 插件（Browser/Chrome/Computer Use）不可用的 Codex Skill | Desktop 插件修复 | 核心 | 是 | 修复 | 未知 | 未知 | 1 | PowerShell | 未声明 | 2026-08-13 | 0 | 2026-08-13 |
+| [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) | Windows-first repair toolkit for Codex Desktop plugins, MCP OAuth, local API providers, and session visibility | Desktop 修复 | 核心 | 否 | 修复 | 未知 | 未知 | 2 | PowerShell | MIT | 2026-05-03 | 12 | 2026-05-03 |
+| [RE-Rays/codex-environment-doctor](https://github.com/RE-Rays/codex-environment-doctor) |  | 环境 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | MIT | 2026-08-06 | 1 | 2026-08-06 |
+| [2395115107-stack/codex-history-doctor](https://github.com/2395115107-stack/codex-history-doctor) |  | 历史记录 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | JavaScript | MIT | 2026-05-27 | 1 | 2026-05-28 |
+| [xiangyanghua-22/codex-hooks-doctor](https://github.com/xiangyanghua-22/codex-hooks-doctor) | Find out why your Codex hooks aren't firing | Hooks | 核心 | 否 | 未知 | 未知 | 未知 | 1 | TypeScript | MIT | 2026-08-11 | 0 | 2026-08-13 |
+| [leiJack-lo/codex-local-doctor-skill](https://github.com/leiJack-lo/codex-local-doctor-skill) | Codex skill to audit and safely mitigate local Codex log, state, and broken Git health issues | 本地状态 | 核心 | 是 | 未知 | 未知 | 未知 | 1 | Python | Apache-2.0 | 2026-06-26 | 0 | 2026-06-26 |
+| [Freyliu0516/Codex-Log-Doctor](https://github.com/Freyliu0516/Codex-Log-Doctor) | Codex Log Doctor is a local, content-blind safety tool for diagnosing and controlling Codex SQLite log churn.  It is an independent community project. It is not affiliated with, endorsed by, or supported by OpenAI. | 日志 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Rust | MIT | 2026-07-13 | 1 | 2026-07-14 |
+| [shixianli083-eng/codex-doctor](https://github.com/shixianli083-eng/codex-doctor) | Codex Doctor: macOS diagnostics for Codex and AI development environments. | macOS 环境 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | MIT | 2026-07-05 | 0 | 2026-07-05 |
+| [luogangan7-lgtm/codex-mcp-doctor](https://github.com/luogangan7-lgtm/codex-mcp-doctor) | 'npm doctor' for MCP. Diagnose broken servers, Cyrillic homoglyph attacks, and silent rug-pulls - zero deps, 287 tests. Built in Codex with GPT-5.6. | MCP | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | MIT | 2026-07-18 | 0 | 2026-07-19 |
+| [wildbyteai/codex-provider-doctor](https://github.com/wildbyteai/codex-provider-doctor) | Read-only Codex third-party model provider diagnostics for configuration, authentication, plugins, and history compatibility. | 模型 Provider | 核心 | 否 | 只读 | 未知 | 未知 | 1 | Python | MIT | 2026-08-04 | 0 | 2026-08-06 |
+| [DWG7318/codex-network-doctor](https://github.com/DWG7318/codex-network-doctor) | Windows offline network evidence collector and v2rayN TUN repair tool | 网络 | 核心 | 否 | 修复 | 未知 | 未知 | 1 | Go | Apache-2.0 | 2026-07-30 | 0 | 2026-08-13 |
+| [2023Anita/codex-speed-doctor](https://github.com/2023Anita/codex-speed-doctor) | Local-first, read-only diagnostics for slow Codex Desktop or CLI startup | 性能 | 核心 | 否 | 只读 | 未知 | 未知 | 1 | Python | MIT | 2026-05-15 | 5 | 2026-07-19 |
+| [Esquetta/CodexPluginDoctor](https://github.com/Esquetta/CodexPluginDoctor) | Local CLI validator for Codex plugin packages, skills, and MCP server bundles. | 插件验证 | 核心 | 是 | 未知 | 未知 | 未知 | 1 | TypeScript | MIT | 2026-04-22 | 2 | 2026-08-25 |
+| [baixinpan/codex-reconnecting-doctor](https://github.com/baixinpan/codex-reconnecting-doctor) | Codex skill and doctor script for diagnosing and repairing Codex Desktop reconnecting loops, proxy drift, and WebSocket transport issues. | 重连 | 核心 | 是 | 修复 | 未知 | 未知 | 2 | Python | MIT | 2026-06-10 | 0 | 2026-06-10 |
+| [juzai0924-cloud/codex-reconnect-doctor](https://github.com/juzai0924-cloud/codex-reconnect-doctor) | A native macOS menu bar tool for diagnosing Codex reconnect and local proxy issues. | 重连 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Swift | MIT | 2026-07-05 | 0 | 2026-07-06 |
+| [YizeSun/codex-doctor](https://github.com/YizeSun/codex-doctor) |  | 运行时存储 | 核心 | 是 | 清理 | 未知 | 未知 | 2 | Shell | MIT | 2026-07-07 | 0 | 2026-07-25 |
+| [Gmasterzhangxinyang/codex-doctor](https://github.com/Gmasterzhangxinyang/codex-doctor) | A local-first CLI health check for Codex sessions: see visible events, tool activity, network status, and likely reasons when Codex appears stuck. | 会话健康 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | MIT | 2026-07-01 | 1 | 2026-07-22 |
+| [configcrate/codex-session-doctor](https://github.com/configcrate/codex-session-doctor) | Read-only health check for oversized and malformed local Codex Desktop sessions. | 会话完整性 | 核心 | 否 | 只读 | 未知 | 未知 | 1 | Go | MIT | 2026-07-17 | 0 | 2026-07-17 |
+| [Maverick04/codex-doctor](https://github.com/Maverick04/codex-doctor) | Codex session diagnostic plugin | 会话可观测性 | 核心 | 是 | 未知 | 未知 | 未知 | 1 | JavaScript | MIT | 2026-04-24 | 1 | 2026-04-25 |
+| [ember056/codex_session_doctor](https://github.com/ember056/codex_session_doctor) | A local recovery and repair tool for Codex Desktop conversations that still exist on disk but disappear from the sidebar. | 会话恢复 | 核心 | 否 | 修复 | 未知 | 未知 | 1 | Python | MIT | 2026-06-12 | 0 | 2026-06-12 |
+| [hj01857655/codex-doctor](https://github.com/hj01857655/codex-doctor) | Diagnose and repair local Codex state across CLI and native egui GUI. | 会话修复 | 核心 | 否 | 修复 | 是 | 是 | 3 | Rust | 未声明 | 2026-04-06 | 1 | 2026-04-08 |
+| [Nitmi/codex-session-doctor](https://github.com/Nitmi/codex-session-doctor) | Windows repair tool for Codex Desktop session render crashes caused by persisted git markers | 会话修复 | 核心 | 否 | 修复 | 未知 | 未知 | 1 | Go | MIT | 2026-05-16 | 0 | 2026-05-16 |
+| [warren2008-2020-spec/codex-doctor](https://github.com/warren2008-2020-spec/codex-doctor) | Read-only diagnostics for Codex setup problems across Windows, WSL, GitHub, npm, sandbox, proxy, and CI workflows | 安装与配置 | 核心 | 否 | 只读 | 未知 | 未知 | 1 | JavaScript | MIT | 2026-07-16 | 0 | 2026-07-16 |
+| [warwickmei/codex-skill-doctor](https://github.com/warwickmei/codex-skill-doctor) | Local proof CLI for Codex skill wrapper diagnostics. | Skill 诊断 | 核心 | 是 | 未知 | 未知 | 未知 | 1 | Python | NOASSERTION | 2026-03-27 | 0 | 2026-03-27 |
+| [junchangzhu42-eng/codex-skill-doctor](https://github.com/junchangzhu42-eng/codex-skill-doctor) | Diagnose and recover Codex Skill installations on Windows | Skill 恢复 | 核心 | 是 | 修复 | 未知 | 未知 | 1 | Python | MIT | 2026-07-13 | 0 | 2026-07-13 |
+| [BTCElectrician/codex-storage-doctor](https://github.com/BTCElectrician/codex-storage-doctor) | Preservation-first diagnosis and reversible mitigation for Codex SQLite diagnostic-log churn. | SQLite 存储 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | Python | Apache-2.0 | 2026-07-24 | 0 | 2026-07-25 |
+| [RobertIonutF/codex-budget-doctor](https://github.com/RobertIonutF/codex-budget-doctor) | Local, privacy-first diagnostics for Codex usage amplification and efficient model profiles. | 用量与预算 | 核心 | 否 | 未知 | 未知 | 未知 | 1 | TypeScript | MIT | 2026-08-21 | 0 | 2026-08-21 |
+| [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor) | Unofficial diagnostics and troubleshooting toolkit for OpenAI Codex on Windows. | Windows | 核心 | 否 | 未知 | 未知 | 未知 | 1 | PowerShell | MIT | 2026-08-11 | 3 | 2026-08-26 |
+| [Yaro-Tab/codex-windows-doctor](https://github.com/Yaro-Tab/codex-windows-doctor) | Privacy-safe, read-only diagnostics for Codex failures on Windows and WSL. | Windows | 核心 | 否 | 只读 | 未知 | 未知 | 1 | PowerShell | MIT | 2026-08-09 | 0 | 2026-08-09 |
+| [Yurainln1122/codex-windows-doctor](https://github.com/Yurainln1122/codex-windows-doctor) | Safe, read-only diagnostics for Windows-specific Codex failures: PowerShell, PATH, configuration, sandbox, and OS compatibility. | Windows | 核心 | 否 | 只读 | 未知 | 未知 | 1 | PowerShell | MIT | 2026-07-31 | 1 | 2026-07-31 |
+| [zjp1997720/codex-doctor](https://github.com/zjp1997720/codex-doctor) | Audit Codex health and workspace context with read-only checks for AGENTS.md, Skills, MCP, hooks, config, and Git hygiene. | 工作区配置 | 核心 | 否 | 只读 | 未知 | 未知 | 1 | Python | MIT | 2026-07-14 | 0 | 2026-07-17 |
+| [momochoog/codex-workspace-doctor](https://github.com/momochoog/codex-workspace-doctor) | Read-only storage report for local Codex workspaces on macOS. | 工作区存储 | 核心 | 否 | 只读 | 未知 | 未知 | 1 | — | 未声明 | 2026-08-09 | 0 | 2026-08-09 |
+| [daniel-p-green/codex-skill_secret-agents-dot-md-doctor](https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor) | Codex skill for drafting concise repo-specific AGENTS.md files from repository evidence and current Codex guidance. | AGENTS.md | 邻近 | 是 | 未知 | 未知 | 未知 | 1 | Python | 未声明 | 2026-04-15 | 0 | 2026-04-15 |
+| [yezhouyedu/codex-report-doctor](https://github.com/yezhouyedu/codex-report-doctor) | A Codex skill for turning statistical output into defensible research reports. | 报告质量 | 邻近 | 是 | 未知 | 未知 | 未知 | 1 | — | MIT | 2026-08-17 | 0 | 2026-08-17 |
+| [gtrgear/codex-submission-doctor](https://github.com/gtrgear/codex-submission-doctor) | A local, privacy-conscious preflight checker for hackathon submissions. | 提交预检 | 邻近 | 否 | 未知 | 未知 | 未知 | 1 | Python | NOASSERTION | 2026-07-21 | 0 | 2026-07-21 |
+| [vik-codex/Doctor](https://github.com/vik-codex/Doctor) |  | 待确认 | 待核验 | 否 | 未知 | 未知 | 未知 | 1 | HTML | 未声明 | 2026-08-20 | 0 | 2026-08-20 |
 
 <!-- catalog-zh:end -->
 
@@ -106,14 +133,15 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 ## 数据与更新
 
-当前数据快照位于 [`data/github-snapshot.json`](data/github-snapshot.json)。运行：
+当前数据快照位于 [`data/github-snapshot.json`](data/github-snapshot.json)，机器可读导出位于 [`data/catalog.json`](data/catalog.json)。运行：
 
 ```bash
+python scripts/discover.py
 python scripts/render.py
 python scripts/render.py --check
 ```
 
-前者重新生成目录与曲线，后者供 CI 检查生成文件是否过期。
+`discover.py` 用于拉取待人工复核候选，`render.py` 重新生成目录/曲线/导出，`--check` 供 CI 检查生成文件是否过期。
 
 ## 免责声明
 

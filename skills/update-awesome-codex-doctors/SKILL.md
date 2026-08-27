@@ -34,6 +34,8 @@ Only then inspect current external evidence:
 
 External metadata changes quickly. Refresh it from GitHub during the contribution rather than copying stale values from an older table.
 
+For a structured refresh pass, run `python scripts/discover.py` to produce `data/discovery-candidates.json` and review that candidate list before editing the snapshot.
+
 ## Edit the source of truth
 
 Edit `data/github-snapshot.json`; do not hand-edit generated catalog rows or the SVG curve.
@@ -42,6 +44,7 @@ Edit `data/github-snapshot.json`; do not hand-edit generated catalog rows or the
 - Update `generated_at` to the actual snapshot date.
 - Recompute `counts` from the project records.
 - Keep manual classifications (`scope`, `specialty`, `skill_or_plugin`) evidence-based.
+- Set `state_change_risk`, `dry_run_support`, `backup_support`, and `evidence_count` from evidence, using `unknown` when unresolved.
 - Use concise factual descriptions; do not copy promotional prose.
 - Do not remove a project solely because a transient network check fails.
 
@@ -52,12 +55,13 @@ The chart is a discovery curve based on repository `created_at`, not popularity.
 From the repository root:
 
 ```bash
+python scripts/discover.py
 python scripts/render.py
 python skills/update-awesome-codex-doctors/scripts/audit_catalog.py .
 git diff --check
 ```
 
-The audit checks schema, counts, uniqueness, repository URL consistency, timestamps, and generated files. Resolve failures rather than bypassing them.
+The audit checks schema, counts, uniqueness, repository URL consistency, timestamps, risk/confidence fields, and generated files. Resolve failures rather than bypassing them.
 
 Review the final diff. It should normally contain the source snapshot plus generated `CATALOG.md` and `assets/community-growth.svg`; include methodology or README changes only when the contribution changes policy or headline counts.
 

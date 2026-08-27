@@ -10,6 +10,8 @@ codex-doctor in:name
 
 The query returned 51 repositories. Each result was reviewed using its name, description, and public repository page.
 
+For routine refreshes, run `python scripts/discover.py` to collect current name matches into `data/discovery-candidates.json`, then manually review candidates before updating `data/github-snapshot.json`.
+
 ## Inclusion
 
 A project is included when it does at least one of the following for OpenAI Codex:
@@ -27,6 +29,12 @@ We exclude medical applications created with Codex, generic test repositories, r
 - **Adjacent:** Doctor-branded Codex workflows for related quality or preflight tasks.
 - **Unverified:** potentially relevant, but insufficient public metadata was available.
 
+Each reviewed project also stores risk/confidence metadata:
+
+- `state_change_risk`: `read-only`, `repair`, `cleanup`, or `unknown`;
+- `dry_run_support` and `backup_support`: `yes`, `no`, or `unknown`;
+- `evidence_count`: number of concrete evidence sources used for the row.
+
 ## Growth chart
 
 The chart uses GitHub repository `created_at`, not the first release, first useful commit, or date the project became public. It is a discovery curve, not an adoption or quality curve.
@@ -38,4 +46,3 @@ The official marker uses the publication date of [Codex CLI v0.131.0](https://gi
 ## Limitations
 
 GitHub search is not exhaustive. Projects may avoid the Doctor name, live inside monorepos, be private, or have incomplete metadata. Stars are volatile and are never used as an inclusion threshold.
-

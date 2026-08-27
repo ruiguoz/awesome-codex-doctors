@@ -89,6 +89,10 @@ def human_specialty(value: str) -> str:
     return value.replace("-", " ").title()
 
 
+def markdown_cell(value: str) -> str:
+    return value.replace("|", "\\|").replace("\n", " ").strip()
+
+
 def sorted_projects(data: dict) -> list[dict]:
     order = {"core": 0, "adjacent": 1, "unverified": 2}
     return sorted(
@@ -159,14 +163,14 @@ def export_catalog_data(data: dict) -> dict:
 def render_catalog_table(data: dict, *, chinese: bool = False) -> str:
     if chinese:
         lines = [
-            "| 项目 | 专科 | 范围 | Skill / Plugin | 风险级别 | 预演 | 备份 | 证据数 | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |",
-            "|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
+            "| 项目 | 关注点 | 专科 | 范围 | Skill / Plugin | 风险级别 | 预演 | 备份 | 证据数 | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |",
+            "|---|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
         ]
         scope_names = {"core": "核心", "adjacent": "邻近", "unverified": "待核验"}
     else:
         lines = [
-            "| Project | Specialty | Scope | Skill / plugin | Risk level | Dry-run | Backup | Evidence | Language | License | Created | Stars | Last push |",
-            "|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
+            "| Project | Focus | Specialty | Scope | Skill / plugin | Risk level | Dry-run | Backup | Evidence | Language | License | Created | Stars | Last push |",
+            "|---|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
         ]
         scope_names = {scope: scope.title() for scope in ("core", "adjacent", "unverified")}
 
@@ -177,12 +181,13 @@ def render_catalog_table(data: dict, *, chinese: bool = False) -> str:
         license_name = project["license"] or ("未声明" if chinese else "Not declared")
         skill = ("是" if project["skill_or_plugin"] else "否") if chinese else ("Yes" if project["skill_or_plugin"] else "No")
         specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"]) if chinese else human_specialty(project["specialty"])
+        focus = markdown_cell(project["description"])
         risk_level = RISK_ZH[project["state_change_risk"]] if chinese else project["state_change_risk"]
         dry_run = CONFIDENCE_ZH[project["dry_run_support"]] if chinese else project["dry_run_support"]
         backup = CONFIDENCE_ZH[project["backup_support"]] if chinese else project["backup_support"]
         lines.append(
             "| "
-            f"[{project['full_name']}]({project['url']}) | {specialty} | "
+            f"[{project['full_name']}]({project['url']}) | {focus} | {specialty} | "
             f"{scope_names[project['scope']]} | {skill} | {risk_level} | {dry_run} | {backup} | {project['evidence_count']} | "
             f"{language} | {license_name} | "
             f"{created} | {project['stars']} | {pushed} |"

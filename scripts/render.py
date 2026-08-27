@@ -226,10 +226,9 @@ def render_catalog_json(data: dict) -> str:
     return json.dumps(export_catalog_data(data), ensure_ascii=False, indent=2)
 
 
-def inject_generated_block(path: Path, start: str, end: str, content: str) -> str:
-    document = path.read_text(encoding="utf-8")
+def inject_generated_block(document: str, start: str, end: str, content: str, *, label: str) -> str:
     if document.count(start) != 1 or document.count(end) != 1:
-        raise ValueError(f"{path.name} must contain exactly one {start!r} and {end!r}")
+        raise ValueError(f"{label} must contain exactly one {start!r} and {end!r}")
     before, remainder = document.split(start, 1)
     _, after = remainder.split(end, 1)
     return f"{before}{start}\n\n{content.rstrip()}\n\n{end}{after}"
@@ -365,42 +364,50 @@ def main() -> int:
     ok = write_or_check(CATALOG_PATH, render_catalog(data), args.check)
     ok = write_or_check(DATA_EXPORT_PATH, render_catalog_json(data), args.check) and ok
     ok = write_or_check(CHART_PATH, render_chart(data), args.check) and ok
+    readme = README_PATH.read_text(encoding="utf-8")
     readme = inject_generated_block(
-        README_PATH,
+        readme,
         "<!-- quick-links-en:start -->",
         "<!-- quick-links-en:end -->",
         render_specialty_links(data),
+        label=README_PATH.name,
     )
     readme = inject_generated_block(
-        README_PATH,
+        readme,
         "<!-- starters-en:start -->",
         "<!-- starters-en:end -->",
         render_starters(data),
+        label=README_PATH.name,
     )
     readme = inject_generated_block(
-        README_PATH,
+        readme,
         "<!-- catalog-en:start -->",
         "<!-- catalog-en:end -->",
         render_catalog_table(data),
+        label=README_PATH.name,
     )
     ok = write_or_check(README_PATH, readme, args.check) and ok
+    readme_zh = README_ZH_PATH.read_text(encoding="utf-8")
     readme_zh = inject_generated_block(
-        README_ZH_PATH,
+        readme_zh,
         "<!-- quick-links-zh:start -->",
         "<!-- quick-links-zh:end -->",
         render_specialty_links(data, chinese=True),
+        label=README_ZH_PATH.name,
     )
     readme_zh = inject_generated_block(
-        README_ZH_PATH,
+        readme_zh,
         "<!-- starters-zh:start -->",
         "<!-- starters-zh:end -->",
         render_starters(data, chinese=True),
+        label=README_ZH_PATH.name,
     )
     readme_zh = inject_generated_block(
-        README_ZH_PATH,
+        readme_zh,
         "<!-- catalog-zh:start -->",
         "<!-- catalog-zh:end -->",
         render_catalog_table(data, chinese=True),
+        label=README_ZH_PATH.name,
     )
     ok = write_or_check(README_ZH_PATH, readme_zh, args.check) and ok
     return 0 if ok else 1

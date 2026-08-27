@@ -62,21 +62,6 @@ SPECIALTY_ZH = {
 }
 
 
-RISK_ZH = {
-    "read-only": "只读",
-    "repair": "修复",
-    "cleanup": "清理",
-    "unknown": "未知",
-}
-
-
-CONFIDENCE_ZH = {
-    "yes": "是",
-    "no": "否",
-    "unknown": "未知",
-}
-
-
 def load_data() -> dict:
     return json.loads(DATA_PATH.read_text(encoding="utf-8"))
 
@@ -91,6 +76,28 @@ def human_specialty(value: str) -> str:
 
 def markdown_cell(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ").strip()
+
+
+def has_cjk(value: str) -> bool:
+    return any("\u4e00" <= char <= "\u9fff" for char in value)
+
+
+def render_focus(project: dict, *, chinese: bool = False) -> str:
+    focus = markdown_cell(project["description"])
+    if not chinese:
+        return focus
+    if focus and has_cjk(focus):
+        return focus
+    specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"])
+    action_map = {
+        "read-only": "只读诊断",
+        "repair": "诊断与修复",
+        "cleanup": "诊断与清理",
+        "unknown": "诊断",
+    }
+    action = action_map[project["state_change_risk"]]
+    tool_form = "Skill/插件" if project["skill_or_plugin"] else "工具"
+    return f"面向{specialty}问题的{action}{tool_form}，用于定位根因并提供处理路径。"
 
 
 def sorted_projects(data: dict) -> list[dict]:
@@ -139,34 +146,22 @@ def export_catalog_data(data: dict) -> dict:
 def render_catalog_table(data: dict, *, chinese: bool = False) -> str:
     if chinese:
         lines = [
-            "| 项目 | 关注点 | 专科 | 范围 | Skill / Plugin | 风险级别 | 预演 | 备份 | 证据数 | 语言 | 许可证 | 创建日期 | Stars | 最后提交 |",
-            "|---|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
+            "| 项目 | 关注点 | 创建日期 | Stars | 最后提交 |",
+            "|---|---|---:|---:|---:|",
         ]
-        scope_names = {"core": "核心", "adjacent": "邻近", "unverified": "待核验"}
     else:
         lines = [
-            "| Project | Focus | Specialty | Scope | Skill / plugin | Risk level | Dry-run | Backup | Evidence | Language | License | Created | Stars | Last push |",
-            "|---|---|---|---:|:---:|---|---:|---:|---:|---|---|---:|---:|---:|",
+            "| Project | Focus | Created | Stars | Last push |",
+            "|---|---|---:|---:|---:|",
         ]
-        scope_names = {scope: scope.title() for scope in ("core", "adjacent", "unverified")}
 
     for project in sorted_projects(data):
         created = parse_date(project["created_at"]).date().isoformat()
         pushed = parse_date(project["pushed_at"]).date().isoformat()
-        language = project["language"] or "—"
-        license_name = project["license"] or ("未声明" if chinese else "Not declared")
-        skill = ("是" if project["skill_or_plugin"] else "否") if chinese else ("Yes" if project["skill_or_plugin"] else "No")
-        specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"]) if chinese else human_specialty(project["specialty"])
-        focus = markdown_cell(project["description"])
-        risk_level = RISK_ZH[project["state_change_risk"]] if chinese else project["state_change_risk"]
-        dry_run = CONFIDENCE_ZH[project["dry_run_support"]] if chinese else project["dry_run_support"]
-        backup = CONFIDENCE_ZH[project["backup_support"]] if chinese else project["backup_support"]
+        focus = render_focus(project, chinese=chinese)
         lines.append(
             "| "
-            f"[{project['full_name']}]({project['url']}) | {focus} | {specialty} | "
-            f"{scope_names[project['scope']]} | {skill} | {risk_level} | {dry_run} | {backup} | {project['evidence_count']} | "
-            f"{language} | {license_name} | "
-            f"{created} | {project['stars']} | {pushed} |"
+            f"[{project['full_name']}]({project['url']}) | {focus} | {created} | {project['stars']} | {pushed} |"
         )
     return "\n".join(lines)
 
@@ -189,12 +184,6 @@ def render_catalog(data: dict) -> str:
     ]
     lines.extend(
         [
-            "",
-            "## Scope labels",
-            "",
-            "- **Core** — diagnoses, explains, repairs, or monitors OpenAI Codex itself.",
-            "- **Adjacent** — uses the Doctor metaphor for a Codex-powered preflight or quality workflow.",
-            "- **Unverified** — name matched, but public metadata was insufficient for confident classification.",
             "",
             "See [METHODOLOGY.md](METHODOLOGY.md) for inclusion and chart rules.",
             "",

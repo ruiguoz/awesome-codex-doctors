@@ -49,8 +49,8 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 | 项目 | 关注点 | 创建日期 | Stars | 最后提交 |
 |---|---|---:|---:|---:|
-| [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) | 面向Desktop 插件修复问题的诊断与修复Skill/插件，用于定位根因并提供处理路径。 | 2026-06-03 | 32 | 2026-07-21 |
-| [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) | 面向Desktop 修复问题的诊断与修复工具，用于定位根因并提供处理路径。 | 2026-05-03 | 12 | 2026-05-03 |
+| [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) | 面向Desktop 插件修复问题的诊断与修复Skill/插件，用于定位根因并提供处理路径。//重点覆盖 Chrome 和 Computer Use | 2026-06-03 | 32 | 2026-07-21 |
+| [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) | 面向Desktop 修复问题的诊断与修复工具，用于定位根因并提供处理路径。本地 API / cc switch / claude-code-router / Cockpit/Cocktail 后，插件、connector、skills 变灰。//Browser Use 显示“未找到浏览器插件”或配置丢失。//provider 配置需要保持本地 API，但插件 UI 需要 ChatGPT/OAuth 登录态。//Cloudflare MCP 配置问题。//历史会话不可见，或 cannot resume running thread ... mismatched path。// | 2026-05-03 | 12 | 2026-05-03 |
 | [2023Anita/codex-speed-doctor](https://github.com/2023Anita/codex-speed-doctor) | 面向性能问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-05-15 | 5 | 2026-07-19 |
 | [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor) | 面向Windows问题的诊断工具，用于定位根因并提供处理路径。 | 2026-08-11 | 3 | 2026-08-26 |
 | [Esquetta/CodexPluginDoctor](https://github.com/Esquetta/CodexPluginDoctor) | 面向插件验证问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-04-22 | 2 | 2026-08-25 |

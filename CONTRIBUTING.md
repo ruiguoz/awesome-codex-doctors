@@ -33,4 +33,4 @@ Each catalog row should explicitly set `state_change_risk`, `dry_run_support`, `
 
 ## Descriptions
 
-Descriptions should be factual and specific. Avoid promotional adjectives, copied marketing text, and unsupported compatibility claims.
+Provide both `description` (English) and `description_zh` (Simplified Chinese). Each should answer “What does this one do?” in a single table-cell sentence and distinguish the project from Doctors with similar names. Name the concrete problem surface, platform, or delivery form. Avoid promotional adjectives, copied marketing text, generic repetition, and unsupported compatibility claims.

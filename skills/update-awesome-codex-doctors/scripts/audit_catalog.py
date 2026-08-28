@@ -20,6 +20,7 @@ PROJECT_FIELDS = {
     "full_name",
     "url",
     "description",
+    "description_zh",
     "scope",
     "specialty",
     "skill_or_plugin",
@@ -99,6 +100,12 @@ def audit(repo: Path, *, data_override: dict | None = None) -> list[str]:
             parsed = urlparse(url)
             if parsed.scheme != "https" or parsed.netloc.lower() != "github.com":
                 errors.append(f"{full_name}: URL must use https://github.com")
+        for field in ("description", "description_zh"):
+            value = project.get(field)
+            if not isinstance(value, str) or not value.strip():
+                errors.append(f"{full_name}: {field} must be a non-empty string")
+            elif "|" in value or "\n" in value:
+                errors.append(f"{full_name}: {field} must fit in one Markdown table cell")
         scope = project.get("scope")
         if scope not in SCOPES:
             errors.append(f"{full_name}: invalid scope {scope!r}")

@@ -78,26 +78,9 @@ def markdown_cell(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ").strip()
 
 
-def has_cjk(value: str) -> bool:
-    return any("\u4e00" <= char <= "\u9fff" for char in value)
-
-
 def render_focus(project: dict, *, chinese: bool = False) -> str:
-    focus = markdown_cell(project["description"])
-    if not chinese:
-        return focus
-    if focus and has_cjk(focus):
-        return focus
-    specialty = SPECIALTY_ZH.get(project["specialty"], project["specialty"])
-    action_map = {
-        "read-only": "只读诊断",
-        "repair": "诊断与修复",
-        "cleanup": "诊断与清理",
-        "unknown": "诊断",
-    }
-    action = action_map[project["state_change_risk"]]
-    tool_form = "Skill/插件" if project["skill_or_plugin"] else "工具"
-    return f"面向{specialty}问题的{action}{tool_form}，用于定位根因并提供处理路径。"
+    field = "description_zh" if chinese else "description"
+    return markdown_cell(project[field])
 
 
 def sorted_projects(data: dict) -> list[dict]:
@@ -146,22 +129,20 @@ def export_catalog_data(data: dict) -> dict:
 def render_catalog_table(data: dict, *, chinese: bool = False) -> str:
     if chinese:
         lines = [
-            "| 项目 | 关注点 | 创建日期 | Stars | 最后提交 |",
-            "|---|---|---:|---:|---:|",
+            "| 项目 | 能做什么 | Stars |",
+            "|---|---|---:|",
         ]
     else:
         lines = [
-            "| Project | Focus | Created | Stars | Last push |",
-            "|---|---|---:|---:|---:|",
+            "| Project | What it does | Stars |",
+            "|---|---|---:|",
         ]
 
     for project in sorted_projects(data):
-        created = parse_date(project["created_at"]).date().isoformat()
-        pushed = parse_date(project["pushed_at"]).date().isoformat()
         focus = render_focus(project, chinese=chinese)
         lines.append(
-            "| "
-            f"[{project['full_name']}]({project['url']}) | {focus} | {created} | {project['stars']} | {pushed} |"
+            f"| [{project['full_name']}]({project['url']}) | {focus} | "
+            f"[⭐ {project['stars']}]({project['url']}/stargazers) |"
         )
     return "\n".join(lines)
 
@@ -178,7 +159,7 @@ def render_catalog(data: dict) -> str:
             f"**{data['counts']['skill_or_plugin']} skills/plugins**"
         ),
         "",
-        "Stars and activity dates are discovery signals, not quality endorsements.",
+        "Stars are discovery signals, not quality endorsements.",
         "",
         render_catalog_table(data),
     ]

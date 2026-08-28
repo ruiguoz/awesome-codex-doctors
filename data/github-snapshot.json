@@ -16,7 +16,8 @@
     {
       "full_name": "warwickmei/codex-skill-doctor",
       "url": "https://github.com/warwickmei/codex-skill-doctor",
-      "description": "Local proof CLI for Codex skill wrapper diagnostics.",
+      "description": "Checks whether Codex skill wrappers are installed and wired correctly with a local proof CLI.",
+      "description_zh": "用本地验证 CLI 检查 Codex Skill wrapper 是否安装正确、调用链是否接通。",
       "scope": "core",
       "specialty": "skill-diagnostics",
       "skill_or_plugin": true,
@@ -35,7 +36,8 @@
     {
       "full_name": "hj01857655/codex-doctor",
       "url": "https://github.com/hj01857655/codex-doctor",
-      "description": "Diagnose and repair local Codex state across CLI and native egui GUI.",
+      "description": "Repairs invisible sessions caused by drift between rollout files, SQLite indexes, archives, and model providers; includes CLI and GUI backups.",
+      "description_zh": "修复 rollout 文件、SQLite 索引、归档状态或模型 Provider 漂移导致的会话不可见；提供 CLI、GUI 与备份。",
       "scope": "core",
       "specialty": "session-repair",
       "skill_or_plugin": false,
@@ -54,7 +56,8 @@
     {
       "full_name": "daniel-p-green/codex-skill_secret-agents-dot-md-doctor",
       "url": "https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor",
-      "description": "Codex skill for drafting concise repo-specific AGENTS.md files from repository evidence and current Codex guidance.",
+      "description": "Drafts concise, repository-specific AGENTS.md instructions from local evidence and current Codex guidance.",
+      "description_zh": "依据仓库本地证据和当前 Codex 指南，起草精简且针对本项目的 AGENTS.md。",
       "scope": "adjacent",
       "specialty": "agents-md",
       "skill_or_plugin": true,
@@ -73,7 +76,8 @@
     {
       "full_name": "Esquetta/CodexPluginDoctor",
       "url": "https://github.com/Esquetta/CodexPluginDoctor",
-      "description": "Local CLI validator for Codex plugin packages, skills, and MCP server bundles.",
+      "description": "Validates Codex plugin packages, skills, MCP bundles, manifests, and registry metadata before release or installation.",
+      "description_zh": "在发布或安装前校验 Codex 插件包、Skills、MCP bundle、manifest 与 registry 元数据。",
       "scope": "core",
       "specialty": "plugin-validation",
       "skill_or_plugin": true,
@@ -92,7 +96,8 @@
     {
       "full_name": "Maverick04/codex-doctor",
       "url": "https://github.com/Maverick04/codex-doctor",
-      "description": "Codex session diagnostic plugin",
+      "description": "Reads session telemetry to expose context pressure, repeated work, tool failures, stalled activity, and token growth.",
+      "description_zh": "读取会话遥测，定位上下文压力、重复工作、工具失败、活动停滞与 Token 增长。",
       "scope": "core",
       "specialty": "session-observability",
       "skill_or_plugin": true,
@@ -111,7 +116,8 @@
     {
       "full_name": "wokao4360-rgb/codex-desktop-doctor",
       "url": "https://github.com/wokao4360-rgb/codex-desktop-doctor",
-      "description": "Windows-first repair toolkit for Codex Desktop plugins, MCP OAuth, local API providers, and session visibility",
+      "description": "Windows all-in-one repair toolkit for Codex Desktop plugins, MCP OAuth, local API providers, and session visibility.",
+      "description_zh": "面向 Windows 的一体化修复工具，覆盖 Desktop 插件、MCP OAuth、本地 API Provider 与会话可见性。",
       "scope": "core",
       "specialty": "desktop-repair",
       "skill_or_plugin": false,
@@ -130,7 +136,8 @@
     {
       "full_name": "2023Anita/codex-speed-doctor",
       "url": "https://github.com/2023Anita/codex-speed-doctor",
-      "description": "Local-first, read-only diagnostics for slow Codex Desktop or CLI startup",
+      "description": "Profiles slow Codex Desktop or CLI startup with local, read-only checks across configuration, integrations, and runtime timing.",
+      "description_zh": "用本地只读检查分析 Codex Desktop/CLI 启动缓慢，覆盖配置、集成项与运行时耗时。",
       "scope": "core",
       "specialty": "performance",
       "skill_or_plugin": false,
@@ -149,7 +156,8 @@
     {
       "full_name": "Nitmi/codex-session-doctor",
       "url": "https://github.com/Nitmi/codex-session-doctor",
-      "description": "Windows repair tool for Codex Desktop session render crashes caused by persisted git markers",
+      "description": "Repairs Windows Codex Desktop session-render crashes caused by persisted Git markers in stored conversation data.",
+      "description_zh": "修复 Windows Codex Desktop 因会话数据残留 Git 标记而发生的渲染崩溃。",
       "scope": "core",
       "specialty": "session-repair",
       "skill_or_plugin": false,
@@ -168,7 +176,8 @@
     {
       "full_name": "ironman429100-rgb/codex-token-doctor",
       "url": "https://github.com/ironman429100-rgb/codex-token-doctor",
-      "description": "",
+      "description": "Analyzes local Codex token events to identify context, caching, output, or long-session drains and rank the highest-impact savings.",
+      "description_zh": "分析本地 Codex Token 事件，区分上下文、缓存、输出或长会话消耗，并按节省效果排序建议。",
       "scope": "core",
       "specialty": "context-and-tokens",
       "skill_or_plugin": false,
@@ -187,7 +196,8 @@
     {
       "full_name": "ChenSir886/codex-context-doctor-cn",
       "url": "https://github.com/ChenSir886/codex-context-doctor-cn",
-      "description": "中文 Codex 上下文配置体检工具，检查自动压缩阈值和模型窗口",
+      "description": "Audits Codex context configuration in Chinese, focusing on automatic compaction thresholds and model context windows.",
+      "description_zh": "中文体检 Codex 上下文配置，重点检查自动压缩阈值与模型上下文窗口。",
       "scope": "core",
       "specialty": "context",
       "skill_or_plugin": false,
@@ -206,7 +216,8 @@
     {
       "full_name": "2395115107-stack/codex-history-doctor",
       "url": "https://github.com/2395115107-stack/codex-history-doctor",
-      "description": "",
+      "description": "Rebuilds session_index.jsonl and SQLite thread rows from local rollout files, with backups and current-provider realignment.",
+      "description_zh": "从本地 rollout 文件重建 session_index.jsonl 与 SQLite thread 记录，并先备份、对齐当前 Provider。",
       "scope": "core",
       "specialty": "history",
       "skill_or_plugin": false,
@@ -225,7 +236,8 @@
     {
       "full_name": "navi118/codex-desktop-doctor-skill",
       "url": "https://github.com/navi118/codex-desktop-doctor-skill",
-      "description": "Codex Skill for diagnosing Chrome and Computer Use failures in Codex Desktop on Windows.",
+      "description": "A Windows Skill that diagnoses Codex Desktop Chrome and Computer Use failures across plugin discovery and browser startup.",
+      "description_zh": "面向 Windows 的 Skill，诊断 Codex Desktop 中插件发现与浏览器启动链路造成的 Chrome、Computer Use 故障。",
       "scope": "core",
       "specialty": "desktop-plugin-repair",
       "skill_or_plugin": true,
@@ -244,7 +256,8 @@
     {
       "full_name": "UPmeme/codex-windows-plugin-doctor",
       "url": "https://github.com/UPmeme/codex-windows-plugin-doctor",
-      "description": "Fix and diagnose Codex Computer Use, Chrome, and Browser plugin issues on Windows.",
+      "description": "Checks and repairs Windows installation issues affecting the Computer Use, Chrome, and Browser plugins.",
+      "description_zh": "检查并修复 Windows 上影响 Computer Use、Chrome 与 Browser 插件的安装问题。",
       "scope": "core",
       "specialty": "desktop-plugin-repair",
       "skill_or_plugin": true,
@@ -263,7 +276,8 @@
     {
       "full_name": "baixinpan/codex-reconnecting-doctor",
       "url": "https://github.com/baixinpan/codex-reconnecting-doctor",
-      "description": "Codex skill and doctor script for diagnosing and repairing Codex Desktop reconnecting loops, proxy drift, and WebSocket transport issues.",
+      "description": "Diagnoses and repairs Codex Desktop reconnect loops caused by proxy drift or WebSocket transport configuration.",
+      "description_zh": "诊断并修复代理漂移或 WebSocket 传输配置导致的 Codex Desktop 反复重连。",
       "scope": "core",
       "specialty": "reconnect",
       "skill_or_plugin": true,
@@ -282,7 +296,8 @@
     {
       "full_name": "ember056/codex_session_doctor",
       "url": "https://github.com/ember056/codex_session_doctor",
-      "description": "A local recovery and repair tool for Codex Desktop conversations that still exist on disk but disappear from the sidebar.",
+      "description": "Recovers Codex Desktop conversations that remain on disk but have disappeared from the sidebar.",
+      "description_zh": "恢复仍保存在磁盘上、但已从 Codex Desktop 侧边栏消失的会话。",
       "scope": "core",
       "specialty": "session-recovery",
       "skill_or_plugin": false,
@@ -301,7 +316,8 @@
     {
       "full_name": "leiJack-lo/codex-local-doctor-skill",
       "url": "https://github.com/leiJack-lo/codex-local-doctor-skill",
-      "description": "Codex skill to audit and safely mitigate local Codex log, state, and broken Git health issues",
+      "description": "Audits local Codex logs, state, and broken Git health, then offers narrowly scoped mitigations with safety gates.",
+      "description_zh": "审计本地 Codex 日志、状态与 Git 健康问题，并在安全门控下提供小范围缓解措施。",
       "scope": "core",
       "specialty": "local-state",
       "skill_or_plugin": true,
@@ -320,7 +336,8 @@
     {
       "full_name": "Gmasterzhangxinyang/codex-doctor",
       "url": "https://github.com/Gmasterzhangxinyang/codex-doctor",
-      "description": "A local-first CLI health check for Codex sessions: see visible events, tool activity, network status, and likely reasons when Codex appears stuck.",
+      "description": "Explains why a Codex session appears stuck by correlating visible events, tool activity, and network status.",
+      "description_zh": "关联可见事件、工具活动与网络状态，解释 Codex 会话为什么看起来卡住。",
       "scope": "core",
       "specialty": "session-health",
       "skill_or_plugin": false,
@@ -339,7 +356,8 @@
     {
       "full_name": "shixianli083-eng/codex-doctor",
       "url": "https://github.com/shixianli083-eng/codex-doctor",
-      "description": "Codex Doctor: macOS diagnostics for Codex and AI development environments.",
+      "description": "Checks Codex and its surrounding AI development environment on macOS for setup and dependency problems.",
+      "description_zh": "检查 macOS 上 Codex 及其周边 AI 开发环境的安装与依赖问题。",
       "scope": "core",
       "specialty": "macos-environment",
       "skill_or_plugin": false,
@@ -358,7 +376,8 @@
     {
       "full_name": "juzai0924-cloud/codex-reconnect-doctor",
       "url": "https://github.com/juzai0924-cloud/codex-reconnect-doctor",
-      "description": "A native macOS menu bar tool for diagnosing Codex reconnect and local proxy issues.",
+      "description": "Monitors Codex reconnect behavior and local proxy health from a native macOS menu-bar app.",
+      "description_zh": "通过原生 macOS 菜单栏应用监控 Codex 重连行为与本地代理健康。",
       "scope": "core",
       "specialty": "reconnect",
       "skill_or_plugin": false,
@@ -377,7 +396,8 @@
     {
       "full_name": "Qiyuanqiii/codex-401-doctor",
       "url": "https://github.com/Qiyuanqiii/codex-401-doctor",
-      "description": "Diagnose and repair common Codex 401 Unauthorized issues on Windows",
+      "description": "Diagnoses and repairs common Windows causes of Codex 401 Unauthorized authentication failures.",
+      "description_zh": "诊断并修复 Windows 上导致 Codex 401 Unauthorized 的常见认证问题。",
       "scope": "core",
       "specialty": "authentication",
       "skill_or_plugin": false,
@@ -396,7 +416,8 @@
     {
       "full_name": "YizeSun/codex-doctor",
       "url": "https://github.com/YizeSun/codex-doctor",
-      "description": "",
+      "description": "Explains Codex runtime disk usage and offers allowlisted cleanup for sessions, caches, Xcode artifacts, and temporary builds on macOS.",
+      "description_zh": "解释 Codex 运行时磁盘占用，并为会话、缓存、Xcode 产物与 macOS 临时构建提供白名单清理。",
       "scope": "core",
       "specialty": "runtime-storage",
       "skill_or_plugin": true,
@@ -415,7 +436,8 @@
     {
       "full_name": "junchangzhu42-eng/codex-skill-doctor",
       "url": "https://github.com/junchangzhu42-eng/codex-skill-doctor",
-      "description": "Diagnose and recover Codex Skill installations on Windows",
+      "description": "Diagnoses and recovers missing, broken, or undiscoverable Codex Skill installations on Windows.",
+      "description_zh": "诊断并恢复 Windows 上缺失、损坏或无法被发现的 Codex Skill 安装。",
       "scope": "core",
       "specialty": "skill-recovery",
       "skill_or_plugin": true,
@@ -434,7 +456,8 @@
     {
       "full_name": "Freyliu0516/Codex-Log-Doctor",
       "url": "https://github.com/Freyliu0516/Codex-Log-Doctor",
-      "description": "Codex Log Doctor is a local, content-blind safety tool for diagnosing and controlling Codex SQLite log churn.  It is an independent community project. It is not affiliated with, endorsed by, or supported by OpenAI.",
+      "description": "Measures and controls Codex SQLite log churn without reading conversation content.",
+      "description_zh": "在不读取对话内容的前提下，测量并控制 Codex SQLite 日志持续膨胀。",
       "scope": "core",
       "specialty": "logs",
       "skill_or_plugin": false,
@@ -453,7 +476,8 @@
     {
       "full_name": "zjp1997720/codex-doctor",
       "url": "https://github.com/zjp1997720/codex-doctor",
-      "description": "Audit Codex health and workspace context with read-only checks for AGENTS.md, Skills, MCP, hooks, config, and Git hygiene.",
+      "description": "Audits AGENTS.md, Skills, MCP, hooks, configuration, provider history, and Git hygiene with read-only evidence checks.",
+      "description_zh": "用只读证据检查审计 AGENTS.md、Skills、MCP、Hooks、配置、Provider 历史与 Git 卫生。",
       "scope": "core",
       "specialty": "workspace-configuration",
       "skill_or_plugin": false,
@@ -472,7 +496,8 @@
     {
       "full_name": "warren2008-2020-spec/codex-doctor",
       "url": "https://github.com/warren2008-2020-spec/codex-doctor",
-      "description": "Read-only diagnostics for Codex setup problems across Windows, WSL, GitHub, npm, sandbox, proxy, and CI workflows",
+      "description": "Runs broad read-only setup diagnostics across Windows, WSL, GitHub, npm, sandbox, proxy, and CI workflows.",
+      "description_zh": "对 Windows、WSL、GitHub、npm、沙箱、代理与 CI 工作流做广覆盖只读安装诊断。",
       "scope": "core",
       "specialty": "setup",
       "skill_or_plugin": false,
@@ -491,7 +516,8 @@
     {
       "full_name": "configcrate/codex-session-doctor",
       "url": "https://github.com/configcrate/codex-session-doctor",
-      "description": "Read-only health check for oversized and malformed local Codex Desktop sessions.",
+      "description": "Detects oversized or malformed local Codex Desktop session files without changing them.",
+      "description_zh": "只读检测体积过大或格式异常的本地 Codex Desktop 会话文件。",
       "scope": "core",
       "specialty": "session-integrity",
       "skill_or_plugin": false,
@@ -510,7 +536,8 @@
     {
       "full_name": "luogangan7-lgtm/codex-mcp-doctor",
       "url": "https://github.com/luogangan7-lgtm/codex-mcp-doctor",
-      "description": "'npm doctor' for MCP. Diagnose broken servers, Cyrillic homoglyph attacks, and silent rug-pulls - zero deps, 287 tests. Built in Codex with GPT-5.6.",
+      "description": "Acts like npm doctor for MCP servers, catching broken setups, Cyrillic homoglyph attacks, and suspicious dependency changes.",
+      "description_zh": "像 npm doctor 一样检查 MCP Server，发现配置损坏、西里尔同形字攻击与可疑依赖变更。",
       "scope": "core",
       "specialty": "mcp",
       "skill_or_plugin": false,
@@ -529,7 +556,8 @@
     {
       "full_name": "gtrgear/codex-submission-doctor",
       "url": "https://github.com/gtrgear/codex-submission-doctor",
-      "description": "A local, privacy-conscious preflight checker for hackathon submissions.",
+      "description": "Runs a local, privacy-conscious quality and packaging preflight for hackathon submissions; adjacent to Codex diagnostics.",
+      "description_zh": "为黑客松提交做本地、注重隐私的质量与打包预检；属于 Codex 诊断的邻近工作流。",
       "scope": "adjacent",
       "specialty": "submission-preflight",
       "skill_or_plugin": false,
@@ -548,7 +576,8 @@
     {
       "full_name": "BTCElectrician/codex-storage-doctor",
       "url": "https://github.com/BTCElectrician/codex-storage-doctor",
-      "description": "Preservation-first diagnosis and reversible mitigation for Codex SQLite diagnostic-log churn.",
+      "description": "Diagnoses Codex SQLite diagnostic-log growth and applies preservation-first, reversible storage mitigations.",
+      "description_zh": "诊断 Codex SQLite 诊断日志增长，并提供以保全数据为先、可逆的存储缓解措施。",
       "scope": "core",
       "specialty": "sqlite-storage",
       "skill_or_plugin": false,
@@ -567,7 +596,8 @@
     {
       "full_name": "Lumidew/codex-doctor",
       "url": "https://github.com/Lumidew/codex-doctor",
-      "description": "Codex-native diagnostics and configuration hygiene with approval-gated fixes.",
+      "description": "Checks Codex-native configuration hygiene and offers only approval-gated fixes.",
+      "description_zh": "检查 Codex 原生配置卫生，并且只在获得批准后执行修复。",
       "scope": "core",
       "specialty": "configuration",
       "skill_or_plugin": false,
@@ -586,7 +616,8 @@
     {
       "full_name": "DWG7318/codex-network-doctor",
       "url": "https://github.com/DWG7318/codex-network-doctor",
-      "description": "Windows offline network evidence collector and v2rayN TUN repair tool",
+      "description": "Collects offline Windows network evidence and repairs v2rayN TUN paths used by Codex connectivity.",
+      "description_zh": "离线收集 Windows 网络证据，并修复影响 Codex 连接的 v2rayN TUN 链路。",
       "scope": "core",
       "specialty": "network",
       "skill_or_plugin": false,
@@ -605,7 +636,8 @@
     {
       "full_name": "Yurainln1122/codex-windows-doctor",
       "url": "https://github.com/Yurainln1122/codex-windows-doctor",
-      "description": "Safe, read-only diagnostics for Windows-specific Codex failures: PowerShell, PATH, configuration, sandbox, and OS compatibility.",
+      "description": "Checks Windows-specific Codex failures in PowerShell, PATH, configuration, sandboxing, and OS compatibility without modifying state.",
+      "description_zh": "只读检查 PowerShell、PATH、配置、沙箱与系统兼容性引发的 Windows Codex 故障。",
       "scope": "core",
       "specialty": "windows",
       "skill_or_plugin": false,
@@ -624,7 +656,8 @@
     {
       "full_name": "wildbyteai/codex-provider-doctor",
       "url": "https://github.com/wildbyteai/codex-provider-doctor",
-      "description": "Read-only Codex third-party model provider diagnostics for configuration, authentication, plugins, and history compatibility.",
+      "description": "Diagnoses third-party model providers across configuration, authentication, plugins, and history compatibility without making changes.",
+      "description_zh": "只读诊断第三方模型 Provider 的配置、认证、插件与历史记录兼容性。",
       "scope": "core",
       "specialty": "model-provider",
       "skill_or_plugin": false,
@@ -643,7 +676,8 @@
     {
       "full_name": "RE-Rays/codex-environment-doctor",
       "url": "https://github.com/RE-Rays/codex-environment-doctor",
-      "description": "",
+      "description": "A Windows desktop dashboard for Codex configuration, proxy ports, and reconnect logs, with backed-up reversible optimizations.",
+      "description_zh": "Windows 桌面仪表盘，检查 Codex 配置、代理端口与重连日志，并提供带备份的可逆优化。",
       "scope": "core",
       "specialty": "environment",
       "skill_or_plugin": false,
@@ -662,7 +696,8 @@
     {
       "full_name": "momochoog/codex-workspace-doctor",
       "url": "https://github.com/momochoog/codex-workspace-doctor",
-      "description": "Read-only storage report for local Codex workspaces on macOS.",
+      "description": "Reports how much disk space local Codex workspaces consume on macOS without deleting anything.",
+      "description_zh": "只读统计 macOS 本地 Codex 工作区的磁盘占用，不执行删除。",
       "scope": "core",
       "specialty": "workspace-storage",
       "skill_or_plugin": false,
@@ -681,7 +716,8 @@
     {
       "full_name": "Yaro-Tab/codex-windows-doctor",
       "url": "https://github.com/Yaro-Tab/codex-windows-doctor",
-      "description": "Privacy-safe, read-only diagnostics for Codex failures on Windows and WSL.",
+      "description": "Runs privacy-safe, read-only health checks for Codex installation, configuration, permissions, and networking on Windows and WSL.",
+      "description_zh": "对 Windows/WSL 的 Codex 安装、配置、权限与网络执行注重隐私的只读健康检查。",
       "scope": "core",
       "specialty": "windows",
       "skill_or_plugin": false,
@@ -700,7 +736,8 @@
     {
       "full_name": "xiangyanghua-22/codex-hooks-doctor",
       "url": "https://github.com/xiangyanghua-22/codex-hooks-doctor",
-      "description": "Find out why your Codex hooks aren't firing",
+      "description": "Traces why configured Codex hooks are not firing and identifies broken trigger or command wiring.",
+      "description_zh": "追踪 Codex Hooks 未触发的原因，定位触发条件或命令接线错误。",
       "scope": "core",
       "specialty": "hooks",
       "skill_or_plugin": false,
@@ -719,7 +756,8 @@
     {
       "full_name": "cuijialin8888-code/codex-win-doctor",
       "url": "https://github.com/cuijialin8888-code/codex-win-doctor",
-      "description": "Unofficial diagnostics and troubleshooting toolkit for OpenAI Codex on Windows.",
+      "description": "Provides a general Windows troubleshooting toolkit for Codex installation, configuration, and runtime failures.",
+      "description_zh": "提供面向 Windows 的 Codex 通用排障工具集，覆盖安装、配置与运行时故障。",
       "scope": "core",
       "specialty": "windows",
       "skill_or_plugin": false,
@@ -738,7 +776,8 @@
     {
       "full_name": "y3078266584/codex-plugin-doctor",
       "url": "https://github.com/y3078266584/codex-plugin-doctor",
-      "description": "🩺 修复 Codex Windows 端 openai-bundled 插件（Browser/Chrome/Computer Use）不可用的 Codex Skill",
+      "description": "Repairs missing or unusable openai-bundled Browser, Chrome, and Computer Use plugin caches on Windows.",
+      "description_zh": "修复 Windows 上缺失或不可用的 openai-bundled Browser、Chrome 与 Computer Use 插件缓存。",
       "scope": "core",
       "specialty": "desktop-plugin-repair",
       "skill_or_plugin": true,
@@ -757,7 +796,8 @@
     {
       "full_name": "yezhouyedu/codex-report-doctor",
       "url": "https://github.com/yezhouyedu/codex-report-doctor",
-      "description": "A Codex skill for turning statistical output into defensible research reports.",
+      "description": "Turns statistical output into evidence-backed, defensible research reports; an adjacent Codex quality workflow.",
+      "description_zh": "把统计输出整理为证据充分、可辩护的研究报告；属于 Codex 质量邻近工作流。",
       "scope": "adjacent",
       "specialty": "report-quality",
       "skill_or_plugin": true,
@@ -776,7 +816,8 @@
     {
       "full_name": "vik-codex/Doctor",
       "url": "https://github.com/vik-codex/Doctor",
-      "description": "",
+      "description": "Unverified HTML project with no public README or description; its Codex diagnostic purpose is not yet documented.",
+      "description_zh": "待核验的 HTML 项目；没有公开 README 或简介，尚无法确认其 Codex 诊断用途。",
       "scope": "unverified",
       "specialty": "unknown",
       "skill_or_plugin": false,
@@ -795,7 +836,8 @@
     {
       "full_name": "RobertIonutF/codex-budget-doctor",
       "url": "https://github.com/RobertIonutF/codex-budget-doctor",
-      "description": "Local, privacy-first diagnostics for Codex usage amplification and efficient model profiles.",
+      "description": "Finds causes of amplified Codex usage and recommends more efficient model profiles with local, privacy-first analysis.",
+      "description_zh": "以本地、隐私优先的方式定位 Codex 用量放大原因，并推荐更高效的模型配置档。",
       "scope": "core",
       "specialty": "usage-and-budget",
       "skill_or_plugin": false,

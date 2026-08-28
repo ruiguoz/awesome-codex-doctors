@@ -45,7 +45,7 @@ Edit `data/github-snapshot.json`; do not hand-edit generated catalog rows or the
 - Recompute `counts` from the project records.
 - Keep manual classifications (`scope`, `specialty`, `skill_or_plugin`) evidence-based.
 - Set `state_change_risk`, `dry_run_support`, `backup_support`, and `evidence_count` from evidence, using `unknown` when unresolved.
-- Use concise factual descriptions; do not copy promotional prose.
+- Write both `description` and `description_zh` as concise, factual answers to “What does this one do?” Distinguish similarly named Doctors by their concrete problem surface, platform, or delivery form; do not copy promotional prose or repeat generic wording.
 - Do not remove a project solely because a transient network check fails.
 
 The chart is a discovery curve based on repository `created_at`, not popularity. Never alter dates or classifications to make the curve look stronger.
@@ -63,7 +63,7 @@ git diff --check
 
 The audit checks schema, counts, uniqueness, repository URL consistency, timestamps, risk/confidence fields, and generated files. Resolve failures rather than bypassing them.
 
-Review the final diff. It should normally contain the source snapshot plus generated `CATALOG.md` and `assets/community-growth.svg`; include methodology or README changes only when the contribution changes policy or headline counts.
+Review the final diff. It should normally contain the source snapshot plus generated `README.md`, `README.zh-CN.md`, `CATALOG.md`, `data/catalog.json`, and `assets/community-growth.svg`; include methodology changes only when the contribution changes policy or headline counts.
 
 ## Leave a merge-ready result
 

@@ -16,18 +16,6 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 这条增长曲线说明：Codex 故障诊断正在形成一个社区维护的专业层，而不再只是一个命令。
 
-## 从这里开始
-
-| 项目 | 主要方向 | 形态 | 是否修改本地状态 |
-|---|---|---|---:|
-| [`openai/codex doctor`](https://github.com/openai/codex/blob/main/codex-rs/cli/src/doctor.rs) | 官方环境与运行时诊断 | 内置 CLI | 否 |
-| [`YizeSun/codex-doctor`](https://github.com/YizeSun/codex-doctor) | 运行时存储、缓存和 macOS 构建产物 | Skill + Shell | 可选清理 |
-| [`hj01857655/codex-doctor`](https://github.com/hj01857655/codex-doctor) | 会话索引修复与恢复 | Rust CLI + GUI | 是，带备份/预演 |
-| [`Maverick04/codex-doctor`](https://github.com/Maverick04/codex-doctor) | 上下文压力、重复工作和慢工具 | Plugin + Node CLI | 否 |
-| [`navi118/codex-desktop-doctor-skill`](https://github.com/navi118/codex-desktop-doctor-skill) | Windows Desktop、Chrome 与 Computer Use 故障 | PowerShell Skill | 是 |
-
-完整目录直接嵌入在下方，同时保留独立的 **[CATALOG.md](CATALOG.md)**。
-
 ## 按专科快速导航
 
 <!-- quick-links-zh:start -->
@@ -45,52 +33,54 @@ Codex 已经内置了[官方 `codex doctor` 诊断命令](https://github.com/ope
 
 ## 完整目录
 
+每一行只说明这位 Doctor 与其他同名项目相比，具体解决什么问题。Stars 是发现线索，不代表质量评分。同一张表也单独保存在 **[CATALOG.md](CATALOG.md)**。
+
 <!-- catalog-zh:start -->
 
-| 项目 | 关注点 | 创建日期 | Stars | 最后提交 |
-|---|---|---:|---:|---:|
-| [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) | 面向Desktop 插件修复问题的诊断与修复Skill/插件，用于定位根因并提供处理路径。//重点覆盖 Chrome 和 Computer Use | 2026-06-03 | 32 | 2026-07-21 |
-| [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) | 面向Desktop 修复问题的诊断与修复工具，用于定位根因并提供处理路径。本地 API / cc switch / claude-code-router / Cockpit/Cocktail 后，插件、connector、skills 变灰。//Browser Use 显示“未找到浏览器插件”或配置丢失。//provider 配置需要保持本地 API，但插件 UI 需要 ChatGPT/OAuth 登录态。//Cloudflare MCP 配置问题。//历史会话不可见，或 cannot resume running thread ... mismatched path。// | 2026-05-03 | 12 | 2026-05-03 |
-| [2023Anita/codex-speed-doctor](https://github.com/2023Anita/codex-speed-doctor) | 面向性能问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-05-15 | 5 | 2026-07-19 |
-| [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor) | 面向Windows问题的诊断工具，用于定位根因并提供处理路径。 | 2026-08-11 | 3 | 2026-08-26 |
-| [Esquetta/CodexPluginDoctor](https://github.com/Esquetta/CodexPluginDoctor) | 面向插件验证问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-04-22 | 2 | 2026-08-25 |
-| [Qiyuanqiii/codex-401-doctor](https://github.com/Qiyuanqiii/codex-401-doctor) | 面向认证问题的诊断与修复工具，用于定位根因并提供处理路径。 | 2026-07-07 | 2 | 2026-08-06 |
-| [RE-Rays/codex-environment-doctor](https://github.com/RE-Rays/codex-environment-doctor) | 面向环境问题的诊断工具，用于定位根因并提供处理路径。 | 2026-08-06 | 1 | 2026-08-06 |
-| [Yurainln1122/codex-windows-doctor](https://github.com/Yurainln1122/codex-windows-doctor) | 面向Windows问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-07-31 | 1 | 2026-07-31 |
-| [Gmasterzhangxinyang/codex-doctor](https://github.com/Gmasterzhangxinyang/codex-doctor) | 面向会话健康问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-01 | 1 | 2026-07-22 |
-| [Freyliu0516/Codex-Log-Doctor](https://github.com/Freyliu0516/Codex-Log-Doctor) | 面向日志问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-13 | 1 | 2026-07-14 |
-| [2395115107-stack/codex-history-doctor](https://github.com/2395115107-stack/codex-history-doctor) | 面向历史记录问题的诊断工具，用于定位根因并提供处理路径。 | 2026-05-27 | 1 | 2026-05-28 |
-| [Maverick04/codex-doctor](https://github.com/Maverick04/codex-doctor) | 面向会话可观测性问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-04-24 | 1 | 2026-04-25 |
-| [hj01857655/codex-doctor](https://github.com/hj01857655/codex-doctor) | 面向会话修复问题的诊断与修复工具，用于定位根因并提供处理路径。 | 2026-04-06 | 1 | 2026-04-08 |
-| [RobertIonutF/codex-budget-doctor](https://github.com/RobertIonutF/codex-budget-doctor) | 面向用量与预算问题的诊断工具，用于定位根因并提供处理路径。 | 2026-08-21 | 0 | 2026-08-21 |
-| [vik-codex/Doctor](https://github.com/vik-codex/Doctor) | 面向待确认问题的诊断工具，用于定位根因并提供处理路径。 | 2026-08-20 | 0 | 2026-08-20 |
-| [yezhouyedu/codex-report-doctor](https://github.com/yezhouyedu/codex-report-doctor) | 面向报告质量问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-08-17 | 0 | 2026-08-17 |
-| [y3078266584/codex-plugin-doctor](https://github.com/y3078266584/codex-plugin-doctor) | 🩺 修复 Codex Windows 端 openai-bundled 插件（Browser/Chrome/Computer Use）不可用的 Codex Skill | 2026-08-13 | 0 | 2026-08-13 |
-| [DWG7318/codex-network-doctor](https://github.com/DWG7318/codex-network-doctor) | 面向网络问题的诊断与修复工具，用于定位根因并提供处理路径。 | 2026-07-30 | 0 | 2026-08-13 |
-| [xiangyanghua-22/codex-hooks-doctor](https://github.com/xiangyanghua-22/codex-hooks-doctor) | 面向Hooks问题的诊断工具，用于定位根因并提供处理路径。 | 2026-08-11 | 0 | 2026-08-13 |
-| [Yaro-Tab/codex-windows-doctor](https://github.com/Yaro-Tab/codex-windows-doctor) | 面向Windows问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-08-09 | 0 | 2026-08-09 |
-| [momochoog/codex-workspace-doctor](https://github.com/momochoog/codex-workspace-doctor) | 面向工作区存储问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-08-09 | 0 | 2026-08-09 |
-| [wildbyteai/codex-provider-doctor](https://github.com/wildbyteai/codex-provider-doctor) | 面向模型 Provider问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-08-04 | 0 | 2026-08-06 |
-| [YizeSun/codex-doctor](https://github.com/YizeSun/codex-doctor) | 面向运行时存储问题的诊断与清理Skill/插件，用于定位根因并提供处理路径。 | 2026-07-07 | 0 | 2026-07-25 |
-| [Lumidew/codex-doctor](https://github.com/Lumidew/codex-doctor) | 面向配置问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-25 | 0 | 2026-07-25 |
-| [BTCElectrician/codex-storage-doctor](https://github.com/BTCElectrician/codex-storage-doctor) | 面向SQLite 存储问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-24 | 0 | 2026-07-25 |
-| [gtrgear/codex-submission-doctor](https://github.com/gtrgear/codex-submission-doctor) | 面向提交预检问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-21 | 0 | 2026-07-21 |
-| [luogangan7-lgtm/codex-mcp-doctor](https://github.com/luogangan7-lgtm/codex-mcp-doctor) | 面向MCP问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-18 | 0 | 2026-07-19 |
-| [configcrate/codex-session-doctor](https://github.com/configcrate/codex-session-doctor) | 面向会话完整性问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-07-17 | 0 | 2026-07-17 |
-| [zjp1997720/codex-doctor](https://github.com/zjp1997720/codex-doctor) | 面向工作区配置问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-07-14 | 0 | 2026-07-17 |
-| [warren2008-2020-spec/codex-doctor](https://github.com/warren2008-2020-spec/codex-doctor) | 面向安装与配置问题的只读诊断工具，用于定位根因并提供处理路径。 | 2026-07-16 | 0 | 2026-07-16 |
-| [junchangzhu42-eng/codex-skill-doctor](https://github.com/junchangzhu42-eng/codex-skill-doctor) | 面向Skill 恢复问题的诊断与修复Skill/插件，用于定位根因并提供处理路径。 | 2026-07-13 | 0 | 2026-07-13 |
-| [juzai0924-cloud/codex-reconnect-doctor](https://github.com/juzai0924-cloud/codex-reconnect-doctor) | 面向重连问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-05 | 0 | 2026-07-06 |
-| [shixianli083-eng/codex-doctor](https://github.com/shixianli083-eng/codex-doctor) | 面向macOS 环境问题的诊断工具，用于定位根因并提供处理路径。 | 2026-07-05 | 0 | 2026-07-05 |
-| [leiJack-lo/codex-local-doctor-skill](https://github.com/leiJack-lo/codex-local-doctor-skill) | 面向本地状态问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-06-26 | 0 | 2026-06-26 |
-| [ember056/codex_session_doctor](https://github.com/ember056/codex_session_doctor) | 面向会话恢复问题的诊断与修复工具，用于定位根因并提供处理路径。 | 2026-06-12 | 0 | 2026-06-12 |
-| [baixinpan/codex-reconnecting-doctor](https://github.com/baixinpan/codex-reconnecting-doctor) | 面向重连问题的诊断与修复Skill/插件，用于定位根因并提供处理路径。 | 2026-06-10 | 0 | 2026-06-10 |
-| [UPmeme/codex-windows-plugin-doctor](https://github.com/UPmeme/codex-windows-plugin-doctor) | 面向Desktop 插件修复问题的诊断与修复Skill/插件，用于定位根因并提供处理路径。 | 2026-06-04 | 0 | 2026-06-04 |
-| [ironman429100-rgb/codex-token-doctor](https://github.com/ironman429100-rgb/codex-token-doctor) | 面向上下文与 Token问题的诊断工具，用于定位根因并提供处理路径。 | 2026-05-20 | 0 | 2026-05-25 |
-| [ChenSir886/codex-context-doctor-cn](https://github.com/ChenSir886/codex-context-doctor-cn) | 中文 Codex 上下文配置体检工具，检查自动压缩阈值和模型窗口 | 2026-05-23 | 0 | 2026-05-23 |
-| [Nitmi/codex-session-doctor](https://github.com/Nitmi/codex-session-doctor) | 面向会话修复问题的诊断与修复工具，用于定位根因并提供处理路径。 | 2026-05-16 | 0 | 2026-05-16 |
-| [daniel-p-green/codex-skill_secret-agents-dot-md-doctor](https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor) | 面向AGENTS.md问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-04-15 | 0 | 2026-04-15 |
-| [warwickmei/codex-skill-doctor](https://github.com/warwickmei/codex-skill-doctor) | 面向Skill 诊断问题的诊断Skill/插件，用于定位根因并提供处理路径。 | 2026-03-27 | 0 | 2026-03-27 |
+| 项目 | 能做什么 | Stars |
+|---|---|---:|
+| [navi118/codex-desktop-doctor-skill](https://github.com/navi118/codex-desktop-doctor-skill) | 面向 Windows 的 Skill，诊断 Codex Desktop 中插件发现与浏览器启动链路造成的 Chrome、Computer Use 故障。 | [⭐ 32](https://github.com/navi118/codex-desktop-doctor-skill/stargazers) |
+| [wokao4360-rgb/codex-desktop-doctor](https://github.com/wokao4360-rgb/codex-desktop-doctor) | 面向 Windows 的一体化修复工具，覆盖 Desktop 插件、MCP OAuth、本地 API Provider 与会话可见性。 | [⭐ 12](https://github.com/wokao4360-rgb/codex-desktop-doctor/stargazers) |
+| [2023Anita/codex-speed-doctor](https://github.com/2023Anita/codex-speed-doctor) | 用本地只读检查分析 Codex Desktop/CLI 启动缓慢，覆盖配置、集成项与运行时耗时。 | [⭐ 5](https://github.com/2023Anita/codex-speed-doctor/stargazers) |
+| [cuijialin8888-code/codex-win-doctor](https://github.com/cuijialin8888-code/codex-win-doctor) | 提供面向 Windows 的 Codex 通用排障工具集，覆盖安装、配置与运行时故障。 | [⭐ 3](https://github.com/cuijialin8888-code/codex-win-doctor/stargazers) |
+| [Esquetta/CodexPluginDoctor](https://github.com/Esquetta/CodexPluginDoctor) | 在发布或安装前校验 Codex 插件包、Skills、MCP bundle、manifest 与 registry 元数据。 | [⭐ 2](https://github.com/Esquetta/CodexPluginDoctor/stargazers) |
+| [Qiyuanqiii/codex-401-doctor](https://github.com/Qiyuanqiii/codex-401-doctor) | 诊断并修复 Windows 上导致 Codex 401 Unauthorized 的常见认证问题。 | [⭐ 2](https://github.com/Qiyuanqiii/codex-401-doctor/stargazers) |
+| [RE-Rays/codex-environment-doctor](https://github.com/RE-Rays/codex-environment-doctor) | Windows 桌面仪表盘，检查 Codex 配置、代理端口与重连日志，并提供带备份的可逆优化。 | [⭐ 1](https://github.com/RE-Rays/codex-environment-doctor/stargazers) |
+| [Yurainln1122/codex-windows-doctor](https://github.com/Yurainln1122/codex-windows-doctor) | 只读检查 PowerShell、PATH、配置、沙箱与系统兼容性引发的 Windows Codex 故障。 | [⭐ 1](https://github.com/Yurainln1122/codex-windows-doctor/stargazers) |
+| [Gmasterzhangxinyang/codex-doctor](https://github.com/Gmasterzhangxinyang/codex-doctor) | 关联可见事件、工具活动与网络状态，解释 Codex 会话为什么看起来卡住。 | [⭐ 1](https://github.com/Gmasterzhangxinyang/codex-doctor/stargazers) |
+| [Freyliu0516/Codex-Log-Doctor](https://github.com/Freyliu0516/Codex-Log-Doctor) | 在不读取对话内容的前提下，测量并控制 Codex SQLite 日志持续膨胀。 | [⭐ 1](https://github.com/Freyliu0516/Codex-Log-Doctor/stargazers) |
+| [2395115107-stack/codex-history-doctor](https://github.com/2395115107-stack/codex-history-doctor) | 从本地 rollout 文件重建 session_index.jsonl 与 SQLite thread 记录，并先备份、对齐当前 Provider。 | [⭐ 1](https://github.com/2395115107-stack/codex-history-doctor/stargazers) |
+| [Maverick04/codex-doctor](https://github.com/Maverick04/codex-doctor) | 读取会话遥测，定位上下文压力、重复工作、工具失败、活动停滞与 Token 增长。 | [⭐ 1](https://github.com/Maverick04/codex-doctor/stargazers) |
+| [hj01857655/codex-doctor](https://github.com/hj01857655/codex-doctor) | 修复 rollout 文件、SQLite 索引、归档状态或模型 Provider 漂移导致的会话不可见；提供 CLI、GUI 与备份。 | [⭐ 1](https://github.com/hj01857655/codex-doctor/stargazers) |
+| [RobertIonutF/codex-budget-doctor](https://github.com/RobertIonutF/codex-budget-doctor) | 以本地、隐私优先的方式定位 Codex 用量放大原因，并推荐更高效的模型配置档。 | [⭐ 0](https://github.com/RobertIonutF/codex-budget-doctor/stargazers) |
+| [vik-codex/Doctor](https://github.com/vik-codex/Doctor) | 待核验的 HTML 项目；没有公开 README 或简介，尚无法确认其 Codex 诊断用途。 | [⭐ 0](https://github.com/vik-codex/Doctor/stargazers) |
+| [yezhouyedu/codex-report-doctor](https://github.com/yezhouyedu/codex-report-doctor) | 把统计输出整理为证据充分、可辩护的研究报告；属于 Codex 质量邻近工作流。 | [⭐ 0](https://github.com/yezhouyedu/codex-report-doctor/stargazers) |
+| [y3078266584/codex-plugin-doctor](https://github.com/y3078266584/codex-plugin-doctor) | 修复 Windows 上缺失或不可用的 openai-bundled Browser、Chrome 与 Computer Use 插件缓存。 | [⭐ 0](https://github.com/y3078266584/codex-plugin-doctor/stargazers) |
+| [DWG7318/codex-network-doctor](https://github.com/DWG7318/codex-network-doctor) | 离线收集 Windows 网络证据，并修复影响 Codex 连接的 v2rayN TUN 链路。 | [⭐ 0](https://github.com/DWG7318/codex-network-doctor/stargazers) |
+| [xiangyanghua-22/codex-hooks-doctor](https://github.com/xiangyanghua-22/codex-hooks-doctor) | 追踪 Codex Hooks 未触发的原因，定位触发条件或命令接线错误。 | [⭐ 0](https://github.com/xiangyanghua-22/codex-hooks-doctor/stargazers) |
+| [Yaro-Tab/codex-windows-doctor](https://github.com/Yaro-Tab/codex-windows-doctor) | 对 Windows/WSL 的 Codex 安装、配置、权限与网络执行注重隐私的只读健康检查。 | [⭐ 0](https://github.com/Yaro-Tab/codex-windows-doctor/stargazers) |
+| [momochoog/codex-workspace-doctor](https://github.com/momochoog/codex-workspace-doctor) | 只读统计 macOS 本地 Codex 工作区的磁盘占用，不执行删除。 | [⭐ 0](https://github.com/momochoog/codex-workspace-doctor/stargazers) |
+| [wildbyteai/codex-provider-doctor](https://github.com/wildbyteai/codex-provider-doctor) | 只读诊断第三方模型 Provider 的配置、认证、插件与历史记录兼容性。 | [⭐ 0](https://github.com/wildbyteai/codex-provider-doctor/stargazers) |
+| [YizeSun/codex-doctor](https://github.com/YizeSun/codex-doctor) | 解释 Codex 运行时磁盘占用，并为会话、缓存、Xcode 产物与 macOS 临时构建提供白名单清理。 | [⭐ 0](https://github.com/YizeSun/codex-doctor/stargazers) |
+| [Lumidew/codex-doctor](https://github.com/Lumidew/codex-doctor) | 检查 Codex 原生配置卫生，并且只在获得批准后执行修复。 | [⭐ 0](https://github.com/Lumidew/codex-doctor/stargazers) |
+| [BTCElectrician/codex-storage-doctor](https://github.com/BTCElectrician/codex-storage-doctor) | 诊断 Codex SQLite 诊断日志增长，并提供以保全数据为先、可逆的存储缓解措施。 | [⭐ 0](https://github.com/BTCElectrician/codex-storage-doctor/stargazers) |
+| [gtrgear/codex-submission-doctor](https://github.com/gtrgear/codex-submission-doctor) | 为黑客松提交做本地、注重隐私的质量与打包预检；属于 Codex 诊断的邻近工作流。 | [⭐ 0](https://github.com/gtrgear/codex-submission-doctor/stargazers) |
+| [luogangan7-lgtm/codex-mcp-doctor](https://github.com/luogangan7-lgtm/codex-mcp-doctor) | 像 npm doctor 一样检查 MCP Server，发现配置损坏、西里尔同形字攻击与可疑依赖变更。 | [⭐ 0](https://github.com/luogangan7-lgtm/codex-mcp-doctor/stargazers) |
+| [configcrate/codex-session-doctor](https://github.com/configcrate/codex-session-doctor) | 只读检测体积过大或格式异常的本地 Codex Desktop 会话文件。 | [⭐ 0](https://github.com/configcrate/codex-session-doctor/stargazers) |
+| [zjp1997720/codex-doctor](https://github.com/zjp1997720/codex-doctor) | 用只读证据检查审计 AGENTS.md、Skills、MCP、Hooks、配置、Provider 历史与 Git 卫生。 | [⭐ 0](https://github.com/zjp1997720/codex-doctor/stargazers) |
+| [warren2008-2020-spec/codex-doctor](https://github.com/warren2008-2020-spec/codex-doctor) | 对 Windows、WSL、GitHub、npm、沙箱、代理与 CI 工作流做广覆盖只读安装诊断。 | [⭐ 0](https://github.com/warren2008-2020-spec/codex-doctor/stargazers) |
+| [junchangzhu42-eng/codex-skill-doctor](https://github.com/junchangzhu42-eng/codex-skill-doctor) | 诊断并恢复 Windows 上缺失、损坏或无法被发现的 Codex Skill 安装。 | [⭐ 0](https://github.com/junchangzhu42-eng/codex-skill-doctor/stargazers) |
+| [juzai0924-cloud/codex-reconnect-doctor](https://github.com/juzai0924-cloud/codex-reconnect-doctor) | 通过原生 macOS 菜单栏应用监控 Codex 重连行为与本地代理健康。 | [⭐ 0](https://github.com/juzai0924-cloud/codex-reconnect-doctor/stargazers) |
+| [shixianli083-eng/codex-doctor](https://github.com/shixianli083-eng/codex-doctor) | 检查 macOS 上 Codex 及其周边 AI 开发环境的安装与依赖问题。 | [⭐ 0](https://github.com/shixianli083-eng/codex-doctor/stargazers) |
+| [leiJack-lo/codex-local-doctor-skill](https://github.com/leiJack-lo/codex-local-doctor-skill) | 审计本地 Codex 日志、状态与 Git 健康问题，并在安全门控下提供小范围缓解措施。 | [⭐ 0](https://github.com/leiJack-lo/codex-local-doctor-skill/stargazers) |
+| [ember056/codex_session_doctor](https://github.com/ember056/codex_session_doctor) | 恢复仍保存在磁盘上、但已从 Codex Desktop 侧边栏消失的会话。 | [⭐ 0](https://github.com/ember056/codex_session_doctor/stargazers) |
+| [baixinpan/codex-reconnecting-doctor](https://github.com/baixinpan/codex-reconnecting-doctor) | 诊断并修复代理漂移或 WebSocket 传输配置导致的 Codex Desktop 反复重连。 | [⭐ 0](https://github.com/baixinpan/codex-reconnecting-doctor/stargazers) |
+| [UPmeme/codex-windows-plugin-doctor](https://github.com/UPmeme/codex-windows-plugin-doctor) | 检查并修复 Windows 上影响 Computer Use、Chrome 与 Browser 插件的安装问题。 | [⭐ 0](https://github.com/UPmeme/codex-windows-plugin-doctor/stargazers) |
+| [ironman429100-rgb/codex-token-doctor](https://github.com/ironman429100-rgb/codex-token-doctor) | 分析本地 Codex Token 事件，区分上下文、缓存、输出或长会话消耗，并按节省效果排序建议。 | [⭐ 0](https://github.com/ironman429100-rgb/codex-token-doctor/stargazers) |
+| [ChenSir886/codex-context-doctor-cn](https://github.com/ChenSir886/codex-context-doctor-cn) | 中文体检 Codex 上下文配置，重点检查自动压缩阈值与模型上下文窗口。 | [⭐ 0](https://github.com/ChenSir886/codex-context-doctor-cn/stargazers) |
+| [Nitmi/codex-session-doctor](https://github.com/Nitmi/codex-session-doctor) | 修复 Windows Codex Desktop 因会话数据残留 Git 标记而发生的渲染崩溃。 | [⭐ 0](https://github.com/Nitmi/codex-session-doctor/stargazers) |
+| [daniel-p-green/codex-skill_secret-agents-dot-md-doctor](https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor) | 依据仓库本地证据和当前 Codex 指南，起草精简且针对本项目的 AGENTS.md。 | [⭐ 0](https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor/stargazers) |
+| [warwickmei/codex-skill-doctor](https://github.com/warwickmei/codex-skill-doctor) | 用本地验证 CLI 检查 Codex Skill wrapper 是否安装正确、调用链是否接通。 | [⭐ 0](https://github.com/warwickmei/codex-skill-doctor/stargazers) |
 
 <!-- catalog-zh:end -->
 

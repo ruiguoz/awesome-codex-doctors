@@ -9,6 +9,8 @@ Manual fields:
 - `scope`
 - `specialty`
 - `skill_or_plugin`
+- `description` (concise English “What it does” copy)
+- `description_zh` (concise Simplified Chinese copy)
 - `state_change_risk`
 - `dry_run_support`
 - `backup_support`
@@ -16,7 +18,7 @@ Manual fields:
 
 GitHub snapshot fields:
 
-- repository URL and description
+- repository URL
 - creation and last-push timestamps
 - stars, forks, language, license, and archived state
 

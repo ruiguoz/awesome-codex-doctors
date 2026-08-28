@@ -13,7 +13,8 @@
 
 - `full_name`: canonical GitHub `owner/name`.
 - `url`: `https://github.com/<full_name>`.
-- `description`: concise factual public description.
+- `description`: concise English answer to “What it does,” written to distinguish the project from similarly named Doctors.
+- `description_zh`: faithful, concise Simplified Chinese version of `description`.
 - `scope`: `core`, `adjacent`, or `unverified`.
 - `specialty`: lowercase hyphenated taxonomy value; reuse an existing value when it fits.
 - `skill_or_plugin`: true only when packaging or public documentation explicitly supports it.
@@ -34,6 +35,8 @@
 - `unverified`: likely relevant but insufficient evidence for confident classification.
 
 Forks and mirrors are not automatically distinct entries. Include one only when it has an independently maintained purpose that readers need to compare.
+
+Descriptions must fit in one Markdown table cell. State the concrete problem surface, platform, or delivery form that differentiates the project; do not repeat generic phrases such as “Codex diagnostic tool.”
 
 ## Discovery candidate workflow
 
